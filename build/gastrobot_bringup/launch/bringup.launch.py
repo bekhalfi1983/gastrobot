@@ -1,1 +1,0 @@
-/home/gastrobot/gastrobot_ws/src/gastrobot_bringup/launch/bringup.launch.py

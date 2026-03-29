@@ -1,0 +1,19 @@
+# ROS2
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Colcon inside packages (your mistake)
+*/build/
+*/install/
+*/log/
+
+# Ignore lidar repo
+src/rplidar_ros/
