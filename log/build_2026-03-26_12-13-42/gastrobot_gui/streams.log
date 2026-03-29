@@ -1,0 +1,26 @@
+[10.501s] Invoking command in '/home/gastrobot/gastrobot_ws/build/gastrobot_gui': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gastrobot/gastrobot_ws/build/gastrobot_gui/build --no-deps symlink_data
+[13.489s] running develop
+[15.190s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[15.191s]   self.local_index = Environment(self.shadow_path + sys.path)
+[15.650s] running egg_info
+[15.651s] creating gastrobot_gui.egg-info
+[15.853s] writing gastrobot_gui.egg-info/PKG-INFO
+[15.856s] writing dependency_links to gastrobot_gui.egg-info/dependency_links.txt
+[15.857s] writing entry points to gastrobot_gui.egg-info/entry_points.txt
+[15.858s] writing requirements to gastrobot_gui.egg-info/requires.txt
+[15.859s] writing top-level names to gastrobot_gui.egg-info/top_level.txt
+[15.864s] writing manifest file 'gastrobot_gui.egg-info/SOURCES.txt'
+[16.273s] reading manifest file 'gastrobot_gui.egg-info/SOURCES.txt'
+[16.279s] writing manifest file 'gastrobot_gui.egg-info/SOURCES.txt'
+[16.720s] running build_ext
+[16.722s] Creating /home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages/gastrobot-gui.egg-link (link to .)
+[16.725s] Installing gui_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/gastrobot_gui
+[16.728s] 
+[16.734s] Installed /home/gastrobot/gastrobot_ws/build/gastrobot_gui
+[16.736s] running symlink_data
+[16.741s] creating /home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/ament_index
+[16.744s] creating /home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/ament_index/resource_index
+[16.745s] creating /home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/ament_index/resource_index/packages
+[16.747s] symbolically linking /home/gastrobot/gastrobot_ws/build/gastrobot_gui/resource/gastrobot_gui -> /home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/ament_index/resource_index/packages
+[16.752s] symbolically linking /home/gastrobot/gastrobot_ws/build/gastrobot_gui/package.xml -> /home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui
+[18.276s] Invoked command in '/home/gastrobot/gastrobot_ws/build/gastrobot_gui' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gastrobot/gastrobot_ws/build/gastrobot_gui/build --no-deps symlink_data

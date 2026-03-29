@@ -1,0 +1,24 @@
+[5.721s] Invoking command in '/home/gastrobot/gastrobot_ws/build/gastrobot_perception': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gastrobot/gastrobot_ws/build/gastrobot_perception/build --no-deps symlink_data
+[7.854s] running develop
+[9.079s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[9.079s]   self.local_index = Environment(self.shadow_path + sys.path)
+[9.450s] running egg_info
+[9.451s] creating gastrobot_perception.egg-info
+[9.583s] writing gastrobot_perception.egg-info/PKG-INFO
+[9.584s] writing dependency_links to gastrobot_perception.egg-info/dependency_links.txt
+[9.585s] writing requirements to gastrobot_perception.egg-info/requires.txt
+[9.586s] writing top-level names to gastrobot_perception.egg-info/top_level.txt
+[9.587s] writing manifest file 'gastrobot_perception.egg-info/SOURCES.txt'
+[9.874s] reading manifest file 'gastrobot_perception.egg-info/SOURCES.txt'
+[9.877s] writing manifest file 'gastrobot_perception.egg-info/SOURCES.txt'
+[10.022s] running build_ext
+[10.023s] Creating /home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages/gastrobot-perception.egg-link (link to .)
+[10.025s] 
+[10.026s] Installed /home/gastrobot/gastrobot_ws/build/gastrobot_perception
+[10.027s] running symlink_data
+[10.027s] creating /home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/ament_index
+[10.028s] creating /home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/ament_index/resource_index
+[10.028s] creating /home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/ament_index/resource_index/packages
+[10.029s] symbolically linking /home/gastrobot/gastrobot_ws/build/gastrobot_perception/resource/gastrobot_perception -> /home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/ament_index/resource_index/packages
+[10.031s] symbolically linking /home/gastrobot/gastrobot_ws/build/gastrobot_perception/package.xml -> /home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception
+[10.224s] Invoked command in '/home/gastrobot/gastrobot_ws/build/gastrobot_perception' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gastrobot/gastrobot_ws/build/gastrobot_perception/build --no-deps symlink_data

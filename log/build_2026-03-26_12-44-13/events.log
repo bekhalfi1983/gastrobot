@@ -1,0 +1,429 @@
+[0.000000] (-) TimerEvent: {}
+[0.001702] (gastrobot_bringup) JobQueued: {'identifier': 'gastrobot_bringup', 'dependencies': OrderedDict()}
+[0.001838] (gastrobot_control) JobQueued: {'identifier': 'gastrobot_control', 'dependencies': OrderedDict()}
+[0.001912] (gastrobot_gui) JobQueued: {'identifier': 'gastrobot_gui', 'dependencies': OrderedDict()}
+[0.001978] (gastrobot_navigation) JobQueued: {'identifier': 'gastrobot_navigation', 'dependencies': OrderedDict()}
+[0.002042] (gastrobot_perception) JobQueued: {'identifier': 'gastrobot_perception', 'dependencies': OrderedDict()}
+[0.002107] (rplidar_ros) JobQueued: {'identifier': 'rplidar_ros', 'dependencies': OrderedDict()}
+[0.002171] (gastrobot_bringup) JobStarted: {'identifier': 'gastrobot_bringup'}
+[0.049556] (gastrobot_control) JobStarted: {'identifier': 'gastrobot_control'}
+[0.087077] (gastrobot_gui) JobStarted: {'identifier': 'gastrobot_gui'}
+[0.099203] (-) TimerEvent: {}
+[0.134823] (gastrobot_navigation) JobStarted: {'identifier': 'gastrobot_navigation'}
+[0.199430] (-) TimerEvent: {}
+[0.300215] (-) TimerEvent: {}
+[0.400901] (-) TimerEvent: {}
+[0.501497] (-) TimerEvent: {}
+[0.602190] (-) TimerEvent: {}
+[0.702845] (-) TimerEvent: {}
+[0.803452] (-) TimerEvent: {}
+[0.904084] (-) TimerEvent: {}
+[1.004711] (-) TimerEvent: {}
+[1.105295] (-) TimerEvent: {}
+[1.205974] (-) TimerEvent: {}
+[1.306685] (-) TimerEvent: {}
+[1.407651] (-) TimerEvent: {}
+[1.508356] (-) TimerEvent: {}
+[1.609049] (-) TimerEvent: {}
+[1.709638] (-) TimerEvent: {}
+[1.810217] (-) TimerEvent: {}
+[1.910883] (-) TimerEvent: {}
+[2.011481] (-) TimerEvent: {}
+[2.112103] (-) TimerEvent: {}
+[2.212686] (-) TimerEvent: {}
+[2.313259] (-) TimerEvent: {}
+[2.413891] (-) TimerEvent: {}
+[2.514623] (-) TimerEvent: {}
+[2.615367] (-) TimerEvent: {}
+[2.716326] (-) TimerEvent: {}
+[2.817001] (-) TimerEvent: {}
+[2.917640] (-) TimerEvent: {}
+[3.018238] (-) TimerEvent: {}
+[3.118898] (-) TimerEvent: {}
+[3.219565] (-) TimerEvent: {}
+[3.320133] (-) TimerEvent: {}
+[3.420788] (-) TimerEvent: {}
+[3.521356] (-) TimerEvent: {}
+[3.621975] (-) TimerEvent: {}
+[3.722745] (-) TimerEvent: {}
+[3.823865] (-) TimerEvent: {}
+[3.924609] (-) TimerEvent: {}
+[4.025208] (-) TimerEvent: {}
+[4.125871] (-) TimerEvent: {}
+[4.226476] (-) TimerEvent: {}
+[4.327241] (-) TimerEvent: {}
+[4.428005] (-) TimerEvent: {}
+[4.528596] (-) TimerEvent: {}
+[4.629198] (-) TimerEvent: {}
+[4.729828] (-) TimerEvent: {}
+[4.830411] (-) TimerEvent: {}
+[4.931030] (-) TimerEvent: {}
+[5.031778] (-) TimerEvent: {}
+[5.136264] (-) TimerEvent: {}
+[5.237250] (-) TimerEvent: {}
+[5.337991] (-) TimerEvent: {}
+[5.440711] (-) TimerEvent: {}
+[5.541712] (-) TimerEvent: {}
+[5.643988] (-) TimerEvent: {}
+[5.746224] (-) TimerEvent: {}
+[5.850717] (-) TimerEvent: {}
+[5.951587] (-) TimerEvent: {}
+[6.052350] (-) TimerEvent: {}
+[6.154670] (-) TimerEvent: {}
+[6.255448] (-) TimerEvent: {}
+[6.358664] (-) TimerEvent: {}
+[6.459392] (-) TimerEvent: {}
+[6.560157] (-) TimerEvent: {}
+[6.660984] (-) TimerEvent: {}
+[6.763671] (-) TimerEvent: {}
+[6.864555] (-) TimerEvent: {}
+[6.966856] (-) TimerEvent: {}
+[7.069678] (-) TimerEvent: {}
+[7.170586] (-) TimerEvent: {}
+[7.273674] (-) TimerEvent: {}
+[7.374464] (-) TimerEvent: {}
+[7.476990] (-) TimerEvent: {}
+[7.579976] (-) TimerEvent: {}
+[7.680794] (-) TimerEvent: {}
+[7.783931] (-) TimerEvent: {}
+[7.884652] (-) TimerEvent: {}
+[7.985377] (-) TimerEvent: {}
+[8.088756] (-) TimerEvent: {}
+[8.189772] (-) TimerEvent: {}
+[8.290648] (-) TimerEvent: {}
+[8.391776] (-) TimerEvent: {}
+[8.494270] (-) TimerEvent: {}
+[8.596703] (-) TimerEvent: {}
+[8.697440] (-) TimerEvent: {}
+[8.798216] (-) TimerEvent: {}
+[8.901668] (-) TimerEvent: {}
+[9.002396] (-) TimerEvent: {}
+[9.103196] (-) TimerEvent: {}
+[9.206951] (-) TimerEvent: {}
+[9.307680] (-) TimerEvent: {}
+[9.408417] (-) TimerEvent: {}
+[9.509209] (-) TimerEvent: {}
+[9.611666] (-) TimerEvent: {}
+[9.712415] (-) TimerEvent: {}
+[9.815675] (-) TimerEvent: {}
+[9.916425] (-) TimerEvent: {}
+[10.017216] (-) TimerEvent: {}
+[10.118225] (-) TimerEvent: {}
+[10.221793] (-) TimerEvent: {}
+[10.327484] (-) TimerEvent: {}
+[10.432171] (-) TimerEvent: {}
+[10.520905] (gastrobot_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/gastrobot_control', 'build', '--build-base', '/home/gastrobot/gastrobot_ws/build/gastrobot_control/build', 'install', '--record', '/home/gastrobot/gastrobot_ws/build/gastrobot_control/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/gastrobot/gastrobot_ws/src/gastrobot_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'gastrobot', 'SSH_CLIENT': '192.168.1.89 44359 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gastrobot', 'OLDPWD': '/home/gastrobot/gastrobot_ws', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install:/home/gastrobot/gastrobot_ws_clean/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gastrobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/home/gastrobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '10', 'AMENT_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/gastrobot/gastrobot_ws/build/gastrobot_control', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.1.89 44359 192.168.1.30 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/gastrobot/gastrobot_ws/build/gastrobot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/build/gastrobot_perception:/home/gastrobot/gastrobot_ws/build/gastrobot_navigation:/home/gastrobot/gastrobot_ws/build/gastrobot_gui:/home/gastrobot/gastrobot_ws/build/gastrobot_control:/home/gastrobot/gastrobot_ws/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[10.554852] (-) TimerEvent: {}
+[10.586901] (gastrobot_bringup) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/gastrobot_bringup', 'build', '--build-base', '/home/gastrobot/gastrobot_ws/build/gastrobot_bringup/build', 'install', '--record', '/home/gastrobot/gastrobot_ws/build/gastrobot_bringup/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/gastrobot/gastrobot_ws/src/gastrobot_bringup', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'gastrobot', 'SSH_CLIENT': '192.168.1.89 44359 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gastrobot', 'OLDPWD': '/home/gastrobot/gastrobot_ws', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install:/home/gastrobot/gastrobot_ws_clean/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gastrobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/home/gastrobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '10', 'AMENT_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/gastrobot/gastrobot_ws/build/gastrobot_bringup', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.1.89 44359 192.168.1.30 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/gastrobot/gastrobot_ws/build/gastrobot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/build/gastrobot_perception:/home/gastrobot/gastrobot_ws/build/gastrobot_navigation:/home/gastrobot/gastrobot_ws/build/gastrobot_gui:/home/gastrobot/gastrobot_ws/build/gastrobot_control:/home/gastrobot/gastrobot_ws/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[10.657890] (-) TimerEvent: {}
+[10.759954] (-) TimerEvent: {}
+[10.782667] (gastrobot_gui) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/gastrobot_gui', 'build', '--build-base', '/home/gastrobot/gastrobot_ws/build/gastrobot_gui/build', 'install', '--record', '/home/gastrobot/gastrobot_ws/build/gastrobot_gui/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/gastrobot/gastrobot_ws/src/gastrobot_gui', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'gastrobot', 'SSH_CLIENT': '192.168.1.89 44359 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gastrobot', 'OLDPWD': '/home/gastrobot/gastrobot_ws', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install:/home/gastrobot/gastrobot_ws_clean/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gastrobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/home/gastrobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '10', 'AMENT_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/gastrobot/gastrobot_ws/build/gastrobot_gui', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.1.89 44359 192.168.1.30 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/gastrobot/gastrobot_ws/build/gastrobot_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/build/gastrobot_perception:/home/gastrobot/gastrobot_ws/build/gastrobot_navigation:/home/gastrobot/gastrobot_ws/build/gastrobot_gui:/home/gastrobot/gastrobot_ws/build/gastrobot_control:/home/gastrobot/gastrobot_ws/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[10.824442] (gastrobot_navigation) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/gastrobot_navigation', 'build', '--build-base', '/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build', 'install', '--record', '/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/gastrobot/gastrobot_ws/src/gastrobot_navigation', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'gastrobot', 'SSH_CLIENT': '192.168.1.89 44359 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gastrobot', 'OLDPWD': '/home/gastrobot/gastrobot_ws', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install:/home/gastrobot/gastrobot_ws_clean/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gastrobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/home/gastrobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '10', 'AMENT_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/gastrobot/gastrobot_ws/build/gastrobot_navigation', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.1.89 44359 192.168.1.30 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/build/gastrobot_perception:/home/gastrobot/gastrobot_ws/build/gastrobot_navigation:/home/gastrobot/gastrobot_ws/build/gastrobot_gui:/home/gastrobot/gastrobot_ws/build/gastrobot_control:/home/gastrobot/gastrobot_ws/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[10.860868] (-) TimerEvent: {}
+[10.965996] (-) TimerEvent: {}
+[11.067359] (-) TimerEvent: {}
+[11.170906] (-) TimerEvent: {}
+[11.271702] (-) TimerEvent: {}
+[11.372586] (-) TimerEvent: {}
+[11.473362] (-) TimerEvent: {}
+[11.575906] (-) TimerEvent: {}
+[11.676657] (-) TimerEvent: {}
+[11.778671] (-) TimerEvent: {}
+[11.879416] (-) TimerEvent: {}
+[11.982670] (-) TimerEvent: {}
+[12.083406] (-) TimerEvent: {}
+[12.184232] (-) TimerEvent: {}
+[12.286886] (-) TimerEvent: {}
+[12.387642] (-) TimerEvent: {}
+[12.489674] (-) TimerEvent: {}
+[12.590414] (-) TimerEvent: {}
+[12.691979] (-) TimerEvent: {}
+[12.794008] (-) TimerEvent: {}
+[12.895877] (-) TimerEvent: {}
+[12.999671] (-) TimerEvent: {}
+[13.050833] (gastrobot_control) StdoutLine: {'line': b'running egg_info\n'}
+[13.099611] (gastrobot_bringup) StdoutLine: {'line': b'running egg_info\n'}
+[13.100432] (-) TimerEvent: {}
+[13.185297] (gastrobot_gui) StdoutLine: {'line': b'running egg_info\n'}
+[13.203666] (-) TimerEvent: {}
+[13.221533] (gastrobot_navigation) StdoutLine: {'line': b'running egg_info\n'}
+[13.249595] (gastrobot_control) StdoutLine: {'line': b'writing ../../build/gastrobot_control/gastrobot_control.egg-info/PKG-INFO\n'}
+[13.251633] (gastrobot_control) StdoutLine: {'line': b'writing dependency_links to ../../build/gastrobot_control/gastrobot_control.egg-info/dependency_links.txt\n'}
+[13.256593] (gastrobot_control) StdoutLine: {'line': b'writing entry points to ../../build/gastrobot_control/gastrobot_control.egg-info/entry_points.txt\n'}
+[13.257247] (gastrobot_control) StdoutLine: {'line': b'writing requirements to ../../build/gastrobot_control/gastrobot_control.egg-info/requires.txt\n'}
+[13.257827] (gastrobot_control) StdoutLine: {'line': b'writing top-level names to ../../build/gastrobot_control/gastrobot_control.egg-info/top_level.txt\n'}
+[13.302184] (gastrobot_bringup) StdoutLine: {'line': b'writing ../../build/gastrobot_bringup/gastrobot_bringup.egg-info/PKG-INFO\n'}
+[13.304043] (gastrobot_bringup) StdoutLine: {'line': b'writing dependency_links to ../../build/gastrobot_bringup/gastrobot_bringup.egg-info/dependency_links.txt\n'}
+[13.304737] (-) TimerEvent: {}
+[13.307667] (gastrobot_bringup) StdoutLine: {'line': b'writing requirements to ../../build/gastrobot_bringup/gastrobot_bringup.egg-info/requires.txt\n'}
+[13.309747] (gastrobot_bringup) StdoutLine: {'line': b'writing top-level names to ../../build/gastrobot_bringup/gastrobot_bringup.egg-info/top_level.txt\n'}
+[13.389992] (gastrobot_gui) StdoutLine: {'line': b'writing ../../build/gastrobot_gui/gastrobot_gui.egg-info/PKG-INFO\n'}
+[13.390700] (gastrobot_gui) StdoutLine: {'line': b'writing dependency_links to ../../build/gastrobot_gui/gastrobot_gui.egg-info/dependency_links.txt\n'}
+[13.393836] (gastrobot_gui) StdoutLine: {'line': b'writing entry points to ../../build/gastrobot_gui/gastrobot_gui.egg-info/entry_points.txt\n'}
+[13.394761] (gastrobot_gui) StdoutLine: {'line': b'writing requirements to ../../build/gastrobot_gui/gastrobot_gui.egg-info/requires.txt\n'}
+[13.397410] (gastrobot_gui) StdoutLine: {'line': b'writing top-level names to ../../build/gastrobot_gui/gastrobot_gui.egg-info/top_level.txt\n'}
+[13.405017] (-) TimerEvent: {}
+[13.423869] (gastrobot_navigation) StdoutLine: {'line': b'writing ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/PKG-INFO\n'}
+[13.424440] (gastrobot_navigation) StdoutLine: {'line': b'writing dependency_links to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/dependency_links.txt\n'}
+[13.427916] (gastrobot_navigation) StdoutLine: {'line': b'writing entry points to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/entry_points.txt\n'}
+[13.430152] (gastrobot_navigation) StdoutLine: {'line': b'writing requirements to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/requires.txt\n'}
+[13.432282] (gastrobot_navigation) StdoutLine: {'line': b'writing top-level names to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/top_level.txt\n'}
+[13.506672] (-) TimerEvent: {}
+[13.607573] (-) TimerEvent: {}
+[13.670682] (gastrobot_control) StdoutLine: {'line': b"reading manifest file '../../build/gastrobot_control/gastrobot_control.egg-info/SOURCES.txt'\n"}
+[13.675993] (gastrobot_control) StdoutLine: {'line': b"writing manifest file '../../build/gastrobot_control/gastrobot_control.egg-info/SOURCES.txt'\n"}
+[13.678656] (gastrobot_control) StdoutLine: {'line': b'running build\n'}
+[13.679277] (gastrobot_control) StdoutLine: {'line': b'running build_py\n'}
+[13.685677] (gastrobot_control) StdoutLine: {'line': b'running install\n'}
+[13.707772] (-) TimerEvent: {}
+[13.718691] (gastrobot_control) StdoutLine: {'line': b'running install_lib\n'}
+[13.719479] (gastrobot_bringup) StdoutLine: {'line': b"reading manifest file '../../build/gastrobot_bringup/gastrobot_bringup.egg-info/SOURCES.txt'\n"}
+[13.723266] (gastrobot_bringup) StdoutLine: {'line': b"writing manifest file '../../build/gastrobot_bringup/gastrobot_bringup.egg-info/SOURCES.txt'\n"}
+[13.724179] (gastrobot_bringup) StdoutLine: {'line': b'running build\n'}
+[13.726952] (gastrobot_bringup) StdoutLine: {'line': b'running build_py\n'}
+[13.727452] (gastrobot_bringup) StdoutLine: {'line': b'running install\n'}
+[13.758231] (gastrobot_bringup) StdoutLine: {'line': b'running install_lib\n'}
+[13.810671] (-) TimerEvent: {}
+[13.814227] (gastrobot_gui) StdoutLine: {'line': b"reading manifest file '../../build/gastrobot_gui/gastrobot_gui.egg-info/SOURCES.txt'\n"}
+[13.818953] (gastrobot_gui) StdoutLine: {'line': b"writing manifest file '../../build/gastrobot_gui/gastrobot_gui.egg-info/SOURCES.txt'\n"}
+[13.822668] (gastrobot_gui) StdoutLine: {'line': b'running build\n'}
+[13.823426] (gastrobot_gui) StdoutLine: {'line': b'running build_py\n'}
+[13.824022] (gastrobot_gui) StdoutLine: {'line': b'running install\n'}
+[13.852704] (gastrobot_navigation) StdoutLine: {'line': b"reading manifest file '../../build/gastrobot_navigation/gastrobot_navigation.egg-info/SOURCES.txt'\n"}
+[13.857667] (gastrobot_gui) StdoutLine: {'line': b'running install_lib\n'}
+[13.858962] (gastrobot_navigation) StdoutLine: {'line': b"writing manifest file '../../build/gastrobot_navigation/gastrobot_navigation.egg-info/SOURCES.txt'\n"}
+[13.860732] (gastrobot_navigation) StdoutLine: {'line': b'running build\n'}
+[13.862662] (gastrobot_navigation) StdoutLine: {'line': b'running build_py\n'}
+[13.865399] (gastrobot_navigation) StdoutLine: {'line': b'running install\n'}
+[13.899670] (gastrobot_navigation) StdoutLine: {'line': b'running install_lib\n'}
+[13.913673] (-) TimerEvent: {}
+[13.929208] (gastrobot_control) StdoutLine: {'line': b'running install_data\n'}
+[13.930457] (gastrobot_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[13.968390] (gastrobot_bringup) StdoutLine: {'line': b'running install_data\n'}
+[13.969089] (gastrobot_bringup) StdoutLine: {'line': b'running install_egg_info\n'}
+[14.016665] (-) TimerEvent: {}
+[14.062462] (gastrobot_gui) StdoutLine: {'line': b'running install_data\n'}
+[14.063702] (gastrobot_gui) StdoutLine: {'line': b'running install_egg_info\n'}
+[14.109362] (gastrobot_navigation) StdoutLine: {'line': b'running install_data\n'}
+[14.110103] (gastrobot_navigation) StdoutLine: {'line': b'running install_egg_info\n'}
+[14.119670] (-) TimerEvent: {}
+[14.138721] (gastrobot_control) StdoutLine: {'line': b"removing '/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages/gastrobot_control-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[14.141626] (gastrobot_control) StdoutLine: {'line': b'Copying ../../build/gastrobot_control/gastrobot_control.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages/gastrobot_control-0.0.0-py3.12.egg-info\n'}
+[14.154667] (gastrobot_control) StdoutLine: {'line': b'running install_scripts\n'}
+[14.182137] (gastrobot_bringup) StdoutLine: {'line': b"removing '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages/gastrobot_bringup-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[14.184549] (gastrobot_bringup) StdoutLine: {'line': b'Copying ../../build/gastrobot_bringup/gastrobot_bringup.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages/gastrobot_bringup-0.0.0-py3.12.egg-info\n'}
+[14.192226] (gastrobot_bringup) StdoutLine: {'line': b'running install_scripts\n'}
+[14.221678] (-) TimerEvent: {}
+[14.275693] (gastrobot_gui) StdoutLine: {'line': b"removing '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages/gastrobot_gui-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[14.281664] (gastrobot_gui) StdoutLine: {'line': b'Copying ../../build/gastrobot_gui/gastrobot_gui.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages/gastrobot_gui-0.0.0-py3.12.egg-info\n'}
+[14.287617] (gastrobot_gui) StdoutLine: {'line': b'running install_scripts\n'}
+[14.321884] (-) TimerEvent: {}
+[14.333258] (gastrobot_navigation) StdoutLine: {'line': b"removing '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[14.339662] (gastrobot_navigation) StdoutLine: {'line': b'Copying ../../build/gastrobot_navigation/gastrobot_navigation.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation-0.0.0-py3.12.egg-info\n'}
+[14.348771] (gastrobot_navigation) StdoutLine: {'line': b'running install_scripts\n'}
+[14.422087] (-) TimerEvent: {}
+[14.523011] (-) TimerEvent: {}
+[14.627010] (-) TimerEvent: {}
+[14.728432] (-) TimerEvent: {}
+[14.829217] (-) TimerEvent: {}
+[14.930013] (-) TimerEvent: {}
+[15.031658] (-) TimerEvent: {}
+[15.133667] (-) TimerEvent: {}
+[15.234402] (-) TimerEvent: {}
+[15.337670] (-) TimerEvent: {}
+[15.438409] (-) TimerEvent: {}
+[15.539250] (-) TimerEvent: {}
+[15.543050] (gastrobot_control) StdoutLine: {'line': b'Installing diff_drive_controller script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control\n'}
+[15.545941] (gastrobot_control) StdoutLine: {'line': b'Installing esp32_bridge_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control\n'}
+[15.548239] (gastrobot_control) StdoutLine: {'line': b'Installing gui_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control\n'}
+[15.550810] (gastrobot_control) StdoutLine: {'line': b'Installing imu_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control\n'}
+[15.553203] (gastrobot_control) StdoutLine: {'line': b'Installing joystick_control_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control\n'}
+[15.555622] (gastrobot_control) StdoutLine: {'line': b'Installing lift_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control\n'}
+[15.557577] (gastrobot_control) StdoutLine: {'line': b'Installing lift_serial_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control\n'}
+[15.560126] (gastrobot_control) StdoutLine: {'line': b'Installing motor_drive_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control\n'}
+[15.562468] (gastrobot_control) StdoutLine: {'line': b'Installing ultrasonic_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control\n'}
+[15.565240] (gastrobot_control) StdoutLine: {'line': b'Installing wheel_odometry_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control\n'}
+[15.568883] (gastrobot_control) StdoutLine: {'line': b"writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_control/install.log'\n"}
+[15.619777] (gastrobot_bringup) StdoutLine: {'line': b"writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_bringup/install.log'\n"}
+[15.641744] (-) TimerEvent: {}
+[15.743090] (-) TimerEvent: {}
+[15.845042] (-) TimerEvent: {}
+[15.848219] (gastrobot_gui) StdoutLine: {'line': b'Installing gui_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/gastrobot_gui\n'}
+[15.853050] (gastrobot_control) CommandEnded: {'returncode': 0}
+[15.859022] (gastrobot_gui) StdoutLine: {'line': b"writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_gui/install.log'\n"}
+[15.948126] (-) TimerEvent: {}
+[15.951236] (gastrobot_control) JobEnded: {'identifier': 'gastrobot_control', 'rc': 0}
+[15.957092] (gastrobot_perception) JobStarted: {'identifier': 'gastrobot_perception'}
+[15.998604] (gastrobot_navigation) StdoutLine: {'line': b'Installing mission_manager script to /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/gastrobot_navigation\n'}
+[16.001669] (gastrobot_navigation) StdoutLine: {'line': b"writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/install.log'\n"}
+[16.024306] (gastrobot_bringup) CommandEnded: {'returncode': 0}
+[16.049685] (-) TimerEvent: {}
+[16.095029] (gastrobot_bringup) JobEnded: {'identifier': 'gastrobot_bringup', 'rc': 0}
+[16.099150] (rplidar_ros) JobStarted: {'identifier': 'rplidar_ros'}
+[16.145943] (gastrobot_gui) CommandEnded: {'returncode': 0}
+[16.149799] (-) TimerEvent: {}
+[16.190084] (gastrobot_gui) JobEnded: {'identifier': 'gastrobot_gui', 'rc': 0}
+[16.249965] (-) TimerEvent: {}
+[16.350575] (-) TimerEvent: {}
+[16.451156] (-) TimerEvent: {}
+[16.551892] (-) TimerEvent: {}
+[16.652707] (-) TimerEvent: {}
+[16.753320] (-) TimerEvent: {}
+[16.853936] (-) TimerEvent: {}
+[16.954491] (-) TimerEvent: {}
+[17.055097] (-) TimerEvent: {}
+[17.155705] (-) TimerEvent: {}
+[17.256281] (-) TimerEvent: {}
+[17.357012] (-) TimerEvent: {}
+[17.414799] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'cmake'}
+[17.417580] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'build'}
+[17.419889] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gastrobot/gastrobot_ws/build/rplidar_ros', '--', '-j4', '-l4'], 'cwd': '/home/gastrobot/gastrobot_ws/build/rplidar_ros', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'gastrobot', 'SSH_CLIENT': '192.168.1.89 44359 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gastrobot', 'OLDPWD': '/home/gastrobot/gastrobot_ws', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install:/home/gastrobot/gastrobot_ws_clean/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gastrobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/home/gastrobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '10', 'AMENT_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/gastrobot/gastrobot_ws/build/rplidar_ros', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.1.89 44359 192.168.1.30 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/gastrobot/gastrobot_ws/build/gastrobot_perception:/home/gastrobot/gastrobot_ws/build/gastrobot_navigation:/home/gastrobot/gastrobot_ws/build/gastrobot_gui:/home/gastrobot/gastrobot_ws/build/gastrobot_control:/home/gastrobot/gastrobot_ws/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy'}), 'shell': False}
+[17.429706] (gastrobot_navigation) CommandEnded: {'returncode': 0}
+[17.457281] (-) TimerEvent: {}
+[17.463148] (gastrobot_navigation) JobEnded: {'identifier': 'gastrobot_navigation', 'rc': 0}
+[17.557489] (-) TimerEvent: {}
+[17.658159] (-) TimerEvent: {}
+[17.760849] (-) TimerEvent: {}
+[17.858869] (rplidar_ros) StdoutLine: {'line': b'[  5%] Built target rplidar_client\n'}
+[17.861829] (-) TimerEvent: {}
+[17.887079] (rplidar_ros) StdoutLine: {'line': b'[ 52%] Built target rplidar_node\n'}
+[17.891831] (rplidar_ros) StdoutLine: {'line': b'[100%] Built target rplidar_composition\n'}
+[17.962014] (-) TimerEvent: {}
+[17.970664] (rplidar_ros) CommandEnded: {'returncode': 0}
+[17.972812] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'install'}
+[18.039996] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gastrobot/gastrobot_ws/build/rplidar_ros'], 'cwd': '/home/gastrobot/gastrobot_ws/build/rplidar_ros', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'gastrobot', 'SSH_CLIENT': '192.168.1.89 44359 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gastrobot', 'OLDPWD': '/home/gastrobot/gastrobot_ws', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install:/home/gastrobot/gastrobot_ws_clean/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gastrobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/home/gastrobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '10', 'AMENT_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/gastrobot/gastrobot_ws/build/rplidar_ros', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.1.89 44359 192.168.1.30 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/gastrobot/gastrobot_ws/build/gastrobot_perception:/home/gastrobot/gastrobot_ws/build/gastrobot_navigation:/home/gastrobot/gastrobot_ws/build/gastrobot_gui:/home/gastrobot/gastrobot_ws/build/gastrobot_control:/home/gastrobot/gastrobot_ws/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy'}), 'shell': False}
+[18.062184] (-) TimerEvent: {}
+[18.100091] (rplidar_ros) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.102252] (rplidar_ros) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[18.106119] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a1_launch.py\n'}
+[18.106991] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m12_launch.py\n'}
+[18.107903] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m7_launch.py\n'}
+[18.108826] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m8_launch.py\n'}
+[18.109680] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3_launch.py\n'}
+[18.110575] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_c1_launch.py\n'}
+[18.111427] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_launch.py\n'}
+[18.112349] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp_launch.py\n'}
+[18.113217] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2_launch.py\n'}
+[18.114103] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2e_launch.py\n'}
+[18.115007] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s3_launch.py\n'}
+[18.115908] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_t1_launch.py\n'}
+[18.116802] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a1_launch.py\n'}
+[18.117666] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m12_launch.py\n'}
+[18.118582] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m7_launch.py\n'}
+[18.119450] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m8_launch.py\n'}
+[18.120358] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3_launch.py\n'}
+[18.121262] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_c1_launch.py\n'}
+[18.122137] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_launch.py\n'}
+[18.123034] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp_launch.py\n'}
+[18.123933] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2_launch.py\n'}
+[18.124857] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2e_launch.py\n'}
+[18.125762] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s3_launch.py\n'}
+[18.126651] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_t1_launch.py\n'}
+[18.128240] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar_ros.rviz\n'}
+[18.129844] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_node\n'}
+[18.130851] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition\n'}
+[18.131864] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_client\n'}
+[18.133401] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros\n'}
+[18.134793] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros\n'}
+[18.136086] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh\n'}
+[18.137254] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv\n'}
+[18.138444] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/environment/path.sh\n'}
+[18.139687] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/environment/path.dsv\n'}
+[18.140834] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/local_setup.bash\n'}
+[18.141937] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/local_setup.sh\n'}
+[18.143041] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/local_setup.zsh\n'}
+[18.144176] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/local_setup.dsv\n'}
+[18.144942] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.dsv\n'}
+[18.162319] (-) TimerEvent: {}
+[18.212269] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros\n'}
+[18.213453] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[18.214693] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[18.215917] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake\n'}
+[18.216850] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake\n'}
+[18.217952] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.xml\n'}
+[18.225335] (rplidar_ros) CommandEnded: {'returncode': 0}
+[18.262477] (-) TimerEvent: {}
+[18.286617] (rplidar_ros) JobEnded: {'identifier': 'rplidar_ros', 'rc': 0}
+[18.362627] (-) TimerEvent: {}
+[18.463145] (-) TimerEvent: {}
+[18.563734] (-) TimerEvent: {}
+[18.664266] (-) TimerEvent: {}
+[18.764846] (-) TimerEvent: {}
+[18.865400] (-) TimerEvent: {}
+[18.966017] (-) TimerEvent: {}
+[19.066587] (-) TimerEvent: {}
+[19.167105] (-) TimerEvent: {}
+[19.267630] (-) TimerEvent: {}
+[19.368162] (-) TimerEvent: {}
+[19.468725] (-) TimerEvent: {}
+[19.569254] (-) TimerEvent: {}
+[19.669835] (-) TimerEvent: {}
+[19.770353] (-) TimerEvent: {}
+[19.871049] (-) TimerEvent: {}
+[19.971605] (-) TimerEvent: {}
+[20.072133] (-) TimerEvent: {}
+[20.172658] (-) TimerEvent: {}
+[20.273180] (-) TimerEvent: {}
+[20.373756] (-) TimerEvent: {}
+[20.474296] (-) TimerEvent: {}
+[20.574878] (-) TimerEvent: {}
+[20.675407] (-) TimerEvent: {}
+[20.776006] (-) TimerEvent: {}
+[20.876603] (-) TimerEvent: {}
+[20.977313] (-) TimerEvent: {}
+[21.078342] (-) TimerEvent: {}
+[21.175791] (gastrobot_perception) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/gastrobot_perception', 'build', '--build-base', '/home/gastrobot/gastrobot_ws/build/gastrobot_perception/build', 'install', '--record', '/home/gastrobot/gastrobot_ws/build/gastrobot_perception/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/gastrobot/gastrobot_ws/src/gastrobot_perception', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'gastrobot', 'SSH_CLIENT': '192.168.1.89 44359 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gastrobot', 'OLDPWD': '/home/gastrobot/gastrobot_ws', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install:/home/gastrobot/gastrobot_ws_clean/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gastrobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/home/gastrobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '10', 'AMENT_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/gastrobot/gastrobot_ws/build/gastrobot_perception', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.1.89 44359 192.168.1.30 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/gastrobot/gastrobot_ws/build/gastrobot_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/build/gastrobot_perception:/home/gastrobot/gastrobot_ws/build/gastrobot_navigation:/home/gastrobot/gastrobot_ws/build/gastrobot_gui:/home/gastrobot/gastrobot_ws/build/gastrobot_control:/home/gastrobot/gastrobot_ws/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control/lib/python3.12/site-packages:/home/gastrobot/gastrobot_ws_clean/build/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/gastrobot/gastrobot_ws/install/rplidar_ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[21.178462] (-) TimerEvent: {}
+[21.279225] (-) TimerEvent: {}
+[21.379825] (-) TimerEvent: {}
+[21.480393] (-) TimerEvent: {}
+[21.580983] (-) TimerEvent: {}
+[21.681585] (-) TimerEvent: {}
+[21.782150] (-) TimerEvent: {}
+[21.882721] (-) TimerEvent: {}
+[21.983240] (-) TimerEvent: {}
+[22.083831] (-) TimerEvent: {}
+[22.184355] (-) TimerEvent: {}
+[22.284924] (-) TimerEvent: {}
+[22.385452] (-) TimerEvent: {}
+[22.486016] (-) TimerEvent: {}
+[22.586575] (-) TimerEvent: {}
+[22.687126] (-) TimerEvent: {}
+[22.759280] (gastrobot_perception) StdoutLine: {'line': b'running egg_info\n'}
+[22.787270] (-) TimerEvent: {}
+[22.884416] (gastrobot_perception) StdoutLine: {'line': b'writing ../../build/gastrobot_perception/gastrobot_perception.egg-info/PKG-INFO\n'}
+[22.885624] (gastrobot_perception) StdoutLine: {'line': b'writing dependency_links to ../../build/gastrobot_perception/gastrobot_perception.egg-info/dependency_links.txt\n'}
+[22.886800] (gastrobot_perception) StdoutLine: {'line': b'writing requirements to ../../build/gastrobot_perception/gastrobot_perception.egg-info/requires.txt\n'}
+[22.887286] (-) TimerEvent: {}
+[22.887771] (gastrobot_perception) StdoutLine: {'line': b'writing top-level names to ../../build/gastrobot_perception/gastrobot_perception.egg-info/top_level.txt\n'}
+[22.987437] (-) TimerEvent: {}
+[23.088023] (-) TimerEvent: {}
+[23.142475] (gastrobot_perception) StdoutLine: {'line': b"reading manifest file '../../build/gastrobot_perception/gastrobot_perception.egg-info/SOURCES.txt'\n"}
+[23.146007] (gastrobot_perception) StdoutLine: {'line': b"writing manifest file '../../build/gastrobot_perception/gastrobot_perception.egg-info/SOURCES.txt'\n"}
+[23.146661] (gastrobot_perception) StdoutLine: {'line': b'running build\n'}
+[23.149761] (gastrobot_perception) StdoutLine: {'line': b'running build_py\n'}
+[23.150127] (gastrobot_perception) StdoutLine: {'line': b'running install\n'}
+[23.174101] (gastrobot_perception) StdoutLine: {'line': b'running install_lib\n'}
+[23.188153] (-) TimerEvent: {}
+[23.288683] (-) TimerEvent: {}
+[23.304360] (gastrobot_perception) StdoutLine: {'line': b'running install_data\n'}
+[23.305047] (gastrobot_perception) StdoutLine: {'line': b'running install_egg_info\n'}
+[23.388831] (-) TimerEvent: {}
+[23.437655] (gastrobot_perception) StdoutLine: {'line': b"removing '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages/gastrobot_perception-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[23.439402] (gastrobot_perception) StdoutLine: {'line': b'Copying ../../build/gastrobot_perception/gastrobot_perception.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages/gastrobot_perception-0.0.0-py3.12.egg-info\n'}
+[23.444557] (gastrobot_perception) StdoutLine: {'line': b'running install_scripts\n'}
+[23.488969] (-) TimerEvent: {}
+[23.589502] (-) TimerEvent: {}
+[23.690053] (-) TimerEvent: {}
+[23.790611] (-) TimerEvent: {}
+[23.891140] (-) TimerEvent: {}
+[23.991687] (-) TimerEvent: {}
+[24.092197] (-) TimerEvent: {}
+[24.192743] (-) TimerEvent: {}
+[24.293283] (-) TimerEvent: {}
+[24.393843] (-) TimerEvent: {}
+[24.400138] (gastrobot_perception) StdoutLine: {'line': b"writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_perception/install.log'\n"}
+[24.494151] (-) TimerEvent: {}
+[24.550818] (gastrobot_perception) CommandEnded: {'returncode': 0}
+[24.579743] (gastrobot_perception) JobEnded: {'identifier': 'gastrobot_perception', 'rc': 0}
+[24.582821] (-) EventReactorShutdown: {}

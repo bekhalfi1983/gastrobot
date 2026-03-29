@@ -1,0 +1,36 @@
+[12.069s] Invoking command in '/home/gastrobot/gastrobot_ws/src/gastrobot_control': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_control build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_control/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_control/install.log --single-version-externally-managed install_data
+[14.554s] running egg_info
+[14.766s] writing ../../build/gastrobot_control/gastrobot_control.egg-info/PKG-INFO
+[14.782s] writing dependency_links to ../../build/gastrobot_control/gastrobot_control.egg-info/dependency_links.txt
+[14.783s] writing entry points to ../../build/gastrobot_control/gastrobot_control.egg-info/entry_points.txt
+[14.784s] writing requirements to ../../build/gastrobot_control/gastrobot_control.egg-info/requires.txt
+[14.791s] writing top-level names to ../../build/gastrobot_control/gastrobot_control.egg-info/top_level.txt
+[15.217s] reading manifest file '../../build/gastrobot_control/gastrobot_control.egg-info/SOURCES.txt'
+[15.223s] writing manifest file '../../build/gastrobot_control/gastrobot_control.egg-info/SOURCES.txt'
+[15.226s] running build
+[15.227s] running build_py
+[15.232s] copying gastrobot_control/imu_node.py -> /home/gastrobot/gastrobot_ws/build/gastrobot_control/build/lib/gastrobot_control
+[15.236s] copying gastrobot_control/wheel_odometry_node.py -> /home/gastrobot/gastrobot_ws/build/gastrobot_control/build/lib/gastrobot_control
+[15.240s] running install
+[15.275s] running install_lib
+[15.488s] copying /home/gastrobot/gastrobot_ws/build/gastrobot_control/build/lib/gastrobot_control/imu_node.py -> /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages/gastrobot_control
+[15.492s] copying /home/gastrobot/gastrobot_ws/build/gastrobot_control/build/lib/gastrobot_control/wheel_odometry_node.py -> /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages/gastrobot_control
+[15.499s] byte-compiling /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages/gastrobot_control/imu_node.py to imu_node.cpython-312.pyc
+[15.502s] byte-compiling /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages/gastrobot_control/wheel_odometry_node.py to wheel_odometry_node.cpython-312.pyc
+[15.507s] running install_data
+[15.508s] running install_egg_info
+[15.741s] removing '/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages/gastrobot_control-0.0.0-py3.12.egg-info' (and everything under it)
+[15.745s] Copying ../../build/gastrobot_control/gastrobot_control.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages/gastrobot_control-0.0.0-py3.12.egg-info
+[15.753s] running install_scripts
+[17.402s] Installing diff_drive_controller script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[17.403s] Installing esp32_bridge_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[17.406s] Installing gui_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[17.411s] Installing imu_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[17.412s] Installing joystick_control_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[17.414s] Installing lift_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[17.415s] Installing lift_serial_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[17.421s] Installing motor_drive_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[17.424s] Installing ultrasonic_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[17.425s] Installing wheel_odometry_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[17.427s] writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_control/install.log'
+[18.900s] Invoked command in '/home/gastrobot/gastrobot_ws/src/gastrobot_control' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_control build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_control/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_control/install.log --single-version-externally-managed install_data

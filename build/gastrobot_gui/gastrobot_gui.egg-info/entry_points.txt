@@ -1,0 +1,2 @@
+[console_scripts]
+gui_node = gastrobot_gui.gui_node:main

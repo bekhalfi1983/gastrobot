@@ -1,0 +1,19 @@
+[10.646s] Invoking command in '/home/gastrobot/gastrobot_ws/src/gastrobot_bringup': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_bringup build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_bringup/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_bringup/install.log --single-version-externally-managed install_data
+[13.278s] running egg_info
+[13.490s] writing ../../build/gastrobot_bringup/gastrobot_bringup.egg-info/PKG-INFO
+[13.492s] writing dependency_links to ../../build/gastrobot_bringup/gastrobot_bringup.egg-info/dependency_links.txt
+[13.495s] writing requirements to ../../build/gastrobot_bringup/gastrobot_bringup.egg-info/requires.txt
+[13.517s] writing top-level names to ../../build/gastrobot_bringup/gastrobot_bringup.egg-info/top_level.txt
+[13.970s] reading manifest file '../../build/gastrobot_bringup/gastrobot_bringup.egg-info/SOURCES.txt'
+[13.976s] writing manifest file '../../build/gastrobot_bringup/gastrobot_bringup.egg-info/SOURCES.txt'
+[13.979s] running build
+[13.980s] running build_py
+[13.982s] running install
+[14.018s] running install_lib
+[14.249s] running install_data
+[14.253s] running install_egg_info
+[14.493s] removing '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages/gastrobot_bringup-0.0.0-py3.12.egg-info' (and everything under it)
+[14.496s] Copying ../../build/gastrobot_bringup/gastrobot_bringup.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages/gastrobot_bringup-0.0.0-py3.12.egg-info
+[14.510s] running install_scripts
+[16.210s] writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_bringup/install.log'
+[17.643s] Invoked command in '/home/gastrobot/gastrobot_ws/src/gastrobot_bringup' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_bringup build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_bringup/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_bringup/install.log --single-version-externally-managed install_data

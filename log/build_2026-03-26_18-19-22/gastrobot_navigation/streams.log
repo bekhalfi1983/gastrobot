@@ -1,0 +1,21 @@
+[11.566s] Invoking command in '/home/gastrobot/gastrobot_ws/src/gastrobot_navigation': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_navigation build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/install.log --single-version-externally-managed install_data
+[13.952s] running egg_info
+[14.167s] writing ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/PKG-INFO
+[14.169s] writing dependency_links to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/dependency_links.txt
+[14.172s] writing entry points to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/entry_points.txt
+[14.174s] writing requirements to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/requires.txt
+[14.174s] writing top-level names to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/top_level.txt
+[14.624s] reading manifest file '../../build/gastrobot_navigation/gastrobot_navigation.egg-info/SOURCES.txt'
+[14.629s] writing manifest file '../../build/gastrobot_navigation/gastrobot_navigation.egg-info/SOURCES.txt'
+[14.632s] running build
+[14.639s] running build_py
+[14.640s] running install
+[14.670s] running install_lib
+[14.904s] running install_data
+[14.907s] running install_egg_info
+[15.130s] removing '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation-0.0.0-py3.12.egg-info' (and everything under it)
+[15.131s] Copying ../../build/gastrobot_navigation/gastrobot_navigation.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation-0.0.0-py3.12.egg-info
+[15.138s] running install_scripts
+[16.747s] Installing mission_manager script to /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/gastrobot_navigation
+[16.748s] writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/install.log'
+[17.555s] Invoked command in '/home/gastrobot/gastrobot_ws/src/gastrobot_navigation' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_navigation build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/install.log --single-version-externally-managed install_data

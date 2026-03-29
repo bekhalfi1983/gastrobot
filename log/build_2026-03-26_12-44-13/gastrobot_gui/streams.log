@@ -1,0 +1,21 @@
+[10.703s] Invoking command in '/home/gastrobot/gastrobot_ws/src/gastrobot_gui': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_gui build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_gui/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_gui/install.log --single-version-externally-managed install_data
+[13.099s] running egg_info
+[13.303s] writing ../../build/gastrobot_gui/gastrobot_gui.egg-info/PKG-INFO
+[13.304s] writing dependency_links to ../../build/gastrobot_gui/gastrobot_gui.egg-info/dependency_links.txt
+[13.307s] writing entry points to ../../build/gastrobot_gui/gastrobot_gui.egg-info/entry_points.txt
+[13.308s] writing requirements to ../../build/gastrobot_gui/gastrobot_gui.egg-info/requires.txt
+[13.311s] writing top-level names to ../../build/gastrobot_gui/gastrobot_gui.egg-info/top_level.txt
+[13.728s] reading manifest file '../../build/gastrobot_gui/gastrobot_gui.egg-info/SOURCES.txt'
+[13.732s] writing manifest file '../../build/gastrobot_gui/gastrobot_gui.egg-info/SOURCES.txt'
+[13.736s] running build
+[13.737s] running build_py
+[13.737s] running install
+[13.771s] running install_lib
+[13.976s] running install_data
+[13.977s] running install_egg_info
+[14.189s] removing '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages/gastrobot_gui-0.0.0-py3.12.egg-info' (and everything under it)
+[14.195s] Copying ../../build/gastrobot_gui/gastrobot_gui.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages/gastrobot_gui-0.0.0-py3.12.egg-info
+[14.201s] running install_scripts
+[15.762s] Installing gui_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/gastrobot_gui
+[15.773s] writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_gui/install.log'
+[16.061s] Invoked command in '/home/gastrobot/gastrobot_ws/src/gastrobot_gui' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_gui build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_gui/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_gui/install.log --single-version-externally-managed install_data

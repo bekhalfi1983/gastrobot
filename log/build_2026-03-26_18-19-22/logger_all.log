@@ -1,0 +1,392 @@
+[0.535s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.536s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffaf717b60>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffaf97f380>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffaf97f380>>, mixin_verb=('build',))
+[0.708s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.709s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.709s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.709s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.709s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.709s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.709s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/gastrobot/gastrobot_ws'
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.710s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.711s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.819s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.819s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.819s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.820s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.820s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.820s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.821s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.821s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.821s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.822s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.822s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.823s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.823s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.823s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.823s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.824s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.825s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.825s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.825s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.825s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.825s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.825s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.826s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.826s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.826s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_bringup) by extension 'ignore'
+[0.827s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_bringup) by extension 'ignore_ament_install'
+[0.827s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_bringup) by extensions ['colcon_pkg']
+[0.827s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_bringup) by extension 'colcon_pkg'
+[0.827s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_bringup) by extensions ['colcon_meta']
+[0.827s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_bringup) by extension 'colcon_meta'
+[0.827s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_bringup) by extensions ['ros']
+[0.827s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_bringup) by extension 'ros'
+[0.835s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gastrobot_bringup' with type 'ros.ament_python' and name 'gastrobot_bringup'
+[0.836s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_control) by extensions ['ignore', 'ignore_ament_install']
+[0.836s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_control) by extension 'ignore'
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_control) by extension 'ignore_ament_install'
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_control) by extensions ['colcon_pkg']
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_control) by extension 'colcon_pkg'
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_control) by extensions ['colcon_meta']
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_control) by extension 'colcon_meta'
+[0.837s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_control) by extensions ['ros']
+[0.838s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_control) by extension 'ros'
+[0.839s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gastrobot_control' with type 'ros.ament_python' and name 'gastrobot_control'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_gui) by extensions ['ignore', 'ignore_ament_install']
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_gui) by extension 'ignore'
+[0.840s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_gui) by extension 'ignore_ament_install'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_gui) by extensions ['colcon_pkg']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_gui) by extension 'colcon_pkg'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_gui) by extensions ['colcon_meta']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_gui) by extension 'colcon_meta'
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_gui) by extensions ['ros']
+[0.841s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_gui) by extension 'ros'
+[0.843s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gastrobot_gui' with type 'ros.ament_python' and name 'gastrobot_gui'
+[0.843s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.844s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_navigation) by extension 'ignore'
+[0.844s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_navigation) by extension 'ignore_ament_install'
+[0.844s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_navigation) by extensions ['colcon_pkg']
+[0.844s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_navigation) by extension 'colcon_pkg'
+[0.845s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_navigation) by extensions ['colcon_meta']
+[0.845s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_navigation) by extension 'colcon_meta'
+[0.845s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_navigation) by extensions ['ros']
+[0.845s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_navigation) by extension 'ros'
+[0.847s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gastrobot_navigation' with type 'ros.ament_python' and name 'gastrobot_navigation'
+[0.847s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_perception) by extensions ['ignore', 'ignore_ament_install']
+[0.847s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_perception) by extension 'ignore'
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_perception) by extension 'ignore_ament_install'
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_perception) by extensions ['colcon_pkg']
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_perception) by extension 'colcon_pkg'
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_perception) by extensions ['colcon_meta']
+[0.848s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_perception) by extension 'colcon_meta'
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_perception) by extensions ['ros']
+[0.849s] Level 1:colcon.colcon_core.package_identification:_identify(src/gastrobot_perception) by extension 'ros'
+[0.851s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gastrobot_perception' with type 'ros.ament_python' and name 'gastrobot_perception'
+[0.851s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore'
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore_ament_install'
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_pkg']
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_pkg'
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_meta']
+[0.852s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_meta'
+[0.853s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ros']
+[0.853s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ros'
+[0.855s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rplidar_ros' with type 'ros.ament_cmake' and name 'rplidar_ros'
+[0.855s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.855s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.855s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.855s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.855s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.931s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.931s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.942s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/gastrobot/gastrobot_ws/install
+[0.945s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/gastrobot/gastrobot_ws_clean/install
+[0.959s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 382 installed packages in /opt/ros/jazzy
+[0.967s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.211s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_bringup' build argument 'cmake_args' from command line to 'None'
+[1.212s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_bringup' build argument 'cmake_target' from command line to 'None'
+[1.212s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.212s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[1.212s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[1.212s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[1.212s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[1.212s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[1.212s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.212s] DEBUG:colcon.colcon_core.verb:Building package 'gastrobot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gastrobot/gastrobot_ws/build/gastrobot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup', 'merge_install': False, 'path': '/home/gastrobot/gastrobot_ws/src/gastrobot_bringup', 'symlink_install': False, 'test_result_base': None}
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_control' build argument 'cmake_args' from command line to 'None'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_control' build argument 'cmake_target' from command line to 'None'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_control' build argument 'cmake_clean_cache' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_control' build argument 'cmake_clean_first' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_control' build argument 'cmake_force_configure' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_control' build argument 'ament_cmake_args' from command line to 'None'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_control' build argument 'catkin_cmake_args' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.215s] DEBUG:colcon.colcon_core.verb:Building package 'gastrobot_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gastrobot/gastrobot_ws/build/gastrobot_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gastrobot/gastrobot_ws/install/gastrobot_control', 'merge_install': False, 'path': '/home/gastrobot/gastrobot_ws/src/gastrobot_control', 'symlink_install': False, 'test_result_base': None}
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_gui' build argument 'cmake_args' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_gui' build argument 'cmake_target' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_gui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_gui' build argument 'cmake_clean_cache' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_gui' build argument 'cmake_clean_first' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_gui' build argument 'cmake_force_configure' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_gui' build argument 'ament_cmake_args' from command line to 'None'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_gui' build argument 'catkin_cmake_args' from command line to 'None'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_gui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.217s] DEBUG:colcon.colcon_core.verb:Building package 'gastrobot_gui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gastrobot/gastrobot_ws/build/gastrobot_gui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gastrobot/gastrobot_ws/install/gastrobot_gui', 'merge_install': False, 'path': '/home/gastrobot/gastrobot_ws/src/gastrobot_gui', 'symlink_install': False, 'test_result_base': None}
+[1.218s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_navigation' build argument 'cmake_args' from command line to 'None'
+[1.218s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_navigation' build argument 'cmake_target' from command line to 'None'
+[1.218s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_navigation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.218s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_navigation' build argument 'cmake_clean_cache' from command line to 'False'
+[1.218s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_navigation' build argument 'cmake_clean_first' from command line to 'False'
+[1.218s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_navigation' build argument 'cmake_force_configure' from command line to 'False'
+[1.219s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_navigation' build argument 'ament_cmake_args' from command line to 'None'
+[1.219s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_navigation' build argument 'catkin_cmake_args' from command line to 'None'
+[1.219s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_navigation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.219s] DEBUG:colcon.colcon_core.verb:Building package 'gastrobot_navigation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gastrobot/gastrobot_ws/build/gastrobot_navigation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation', 'merge_install': False, 'path': '/home/gastrobot/gastrobot_ws/src/gastrobot_navigation', 'symlink_install': False, 'test_result_base': None}
+[1.220s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_perception' build argument 'cmake_args' from command line to 'None'
+[1.220s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_perception' build argument 'cmake_target' from command line to 'None'
+[1.220s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_perception' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.220s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_perception' build argument 'cmake_clean_cache' from command line to 'False'
+[1.220s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_perception' build argument 'cmake_clean_first' from command line to 'False'
+[1.220s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_perception' build argument 'cmake_force_configure' from command line to 'False'
+[1.221s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_perception' build argument 'ament_cmake_args' from command line to 'None'
+[1.221s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_perception' build argument 'catkin_cmake_args' from command line to 'None'
+[1.221s] Level 5:colcon.colcon_core.verb:set package 'gastrobot_perception' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.221s] DEBUG:colcon.colcon_core.verb:Building package 'gastrobot_perception' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gastrobot/gastrobot_ws/build/gastrobot_perception', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gastrobot/gastrobot_ws/install/gastrobot_perception', 'merge_install': False, 'path': '/home/gastrobot/gastrobot_ws/src/gastrobot_perception', 'symlink_install': False, 'test_result_base': None}
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_args' from command line to 'None'
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target' from command line to 'None'
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_first' from command line to 'False'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_force_configure' from command line to 'False'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'ament_cmake_args' from command line to 'None'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[1.223s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.223s] DEBUG:colcon.colcon_core.verb:Building package 'rplidar_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gastrobot/gastrobot_ws/build/rplidar_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gastrobot/gastrobot_ws/install/rplidar_ros', 'merge_install': False, 'path': '/home/gastrobot/gastrobot_ws/src/rplidar_ros', 'symlink_install': False, 'test_result_base': None}
+[1.223s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.226s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.228s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gastrobot/gastrobot_ws/src/gastrobot_bringup' with build type 'ament_python'
+[1.229s] Level 1:colcon.colcon_core.shell:create_environment_hook('gastrobot_bringup', 'ament_prefix_path')
+[1.237s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/gastrobot_bringup/hook/ament_prefix_path.ps1'
+[1.241s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/gastrobot_bringup/hook/ament_prefix_path.dsv'
+[1.243s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/gastrobot_bringup/hook/ament_prefix_path.sh'
+[1.246s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.246s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.273s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gastrobot/gastrobot_ws/src/gastrobot_control' with build type 'ament_python'
+[1.273s] Level 1:colcon.colcon_core.shell:create_environment_hook('gastrobot_control', 'ament_prefix_path')
+[1.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/gastrobot_control/hook/ament_prefix_path.ps1'
+[1.276s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/gastrobot_control/hook/ament_prefix_path.dsv'
+[1.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/gastrobot_control/hook/ament_prefix_path.sh'
+[1.290s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.290s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.320s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gastrobot/gastrobot_ws/src/gastrobot_gui' with build type 'ament_python'
+[1.320s] Level 1:colcon.colcon_core.shell:create_environment_hook('gastrobot_gui', 'ament_prefix_path')
+[1.321s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui/hook/ament_prefix_path.ps1'
+[1.324s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui/hook/ament_prefix_path.dsv'
+[1.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui/hook/ament_prefix_path.sh'
+[1.329s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.329s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.357s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gastrobot/gastrobot_ws/src/gastrobot_navigation' with build type 'ament_python'
+[1.357s] Level 1:colcon.colcon_core.shell:create_environment_hook('gastrobot_navigation', 'ament_prefix_path')
+[1.358s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation/hook/ament_prefix_path.ps1'
+[1.360s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation/hook/ament_prefix_path.dsv'
+[1.362s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation/hook/ament_prefix_path.sh'
+[1.365s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.365s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.557s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gastrobot/gastrobot_ws/src/gastrobot_bringup'
+[2.557s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.558s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.748s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gastrobot/gastrobot_ws/src/gastrobot_control'
+[3.749s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.749s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.950s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gastrobot/gastrobot_ws/src/gastrobot_gui'
+[4.951s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.952s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.149s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gastrobot/gastrobot_ws/src/gastrobot_navigation'
+[6.149s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.150s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.587s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gastrobot/gastrobot_ws/src/gastrobot_control': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_control build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_control/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_control/install.log --single-version-externally-managed install_data
+[11.844s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gastrobot/gastrobot_ws/src/gastrobot_gui': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_gui build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_gui/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_gui/install.log --single-version-externally-managed install_data
+[11.875s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gastrobot/gastrobot_ws/src/gastrobot_bringup': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_bringup build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_bringup/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_bringup/install.log --single-version-externally-managed install_data
+[12.923s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gastrobot/gastrobot_ws/src/gastrobot_navigation': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_navigation build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/install.log --single-version-externally-managed install_data
+[17.212s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gastrobot/gastrobot_ws/src/gastrobot_control' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_control build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_control/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_control/install.log --single-version-externally-managed install_data
+[17.225s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_control' for CMake module files
+[17.230s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_control' for CMake config files
+[17.235s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib'
+[17.236s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_control/bin'
+[17.236s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/pkgconfig/gastrobot_control.pc'
+[17.238s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages'
+[17.238s] Level 1:colcon.colcon_core.shell:create_environment_hook('gastrobot_control', 'pythonpath')
+[17.239s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/gastrobot_control/hook/pythonpath.ps1'
+[17.242s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/gastrobot_control/hook/pythonpath.dsv'
+[17.244s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/gastrobot_control/hook/pythonpath.sh'
+[17.248s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_control/bin'
+[17.249s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gastrobot_control)
+[17.250s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/gastrobot_control/package.ps1'
+[17.254s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/gastrobot_control/package.dsv'
+[17.257s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/gastrobot_control/package.sh'
+[17.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/gastrobot_control/package.bash'
+[17.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/gastrobot_control/package.zsh'
+[17.268s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gastrobot/gastrobot_ws/install/gastrobot_control/share/colcon-core/packages/gastrobot_control)
+[17.272s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gastrobot/gastrobot_ws/src/gastrobot_perception' with build type 'ament_python'
+[17.272s] Level 1:colcon.colcon_core.shell:create_environment_hook('gastrobot_perception', 'ament_prefix_path')
+[17.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception/hook/ament_prefix_path.ps1'
+[17.278s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception/hook/ament_prefix_path.dsv'
+[17.280s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception/hook/ament_prefix_path.sh'
+[17.283s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[17.284s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[18.797s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gastrobot/gastrobot_ws/src/gastrobot_perception'
+[18.798s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[18.798s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[18.830s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_gui' for CMake module files
+[18.831s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gastrobot/gastrobot_ws/src/gastrobot_gui' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_gui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_gui build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_gui/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_gui/install.log --single-version-externally-managed install_data
+[18.834s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_gui' for CMake config files
+[18.837s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib'
+[18.838s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/bin'
+[18.838s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/pkgconfig/gastrobot_gui.pc'
+[18.839s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/lib/python3.12/site-packages'
+[18.840s] Level 1:colcon.colcon_core.shell:create_environment_hook('gastrobot_gui', 'pythonpath')
+[18.841s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui/hook/pythonpath.ps1'
+[18.843s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui/hook/pythonpath.dsv'
+[18.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui/hook/pythonpath.sh'
+[18.848s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/bin'
+[18.848s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gastrobot_gui)
+[18.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui/package.ps1'
+[18.858s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui/package.dsv'
+[18.860s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui/package.sh'
+[18.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui/package.bash'
+[18.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/gastrobot_gui/package.zsh'
+[18.866s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gastrobot/gastrobot_ws/install/gastrobot_gui/share/colcon-core/packages/gastrobot_gui)
+[18.868s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup' for CMake module files
+[18.872s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gastrobot/gastrobot_ws/src/gastrobot_bringup' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_bringup build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_bringup/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_bringup/install.log --single-version-externally-managed install_data
+[18.874s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup' for CMake config files
+[18.878s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib'
+[18.878s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/bin'
+[18.879s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/pkgconfig/gastrobot_bringup.pc'
+[18.880s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/lib/python3.12/site-packages'
+[18.880s] Level 1:colcon.colcon_core.shell:create_environment_hook('gastrobot_bringup', 'pythonpath')
+[18.881s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/gastrobot_bringup/hook/pythonpath.ps1'
+[18.883s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/gastrobot_bringup/hook/pythonpath.dsv'
+[18.886s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/gastrobot_bringup/hook/pythonpath.sh'
+[18.889s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/bin'
+[18.889s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gastrobot_bringup)
+[18.890s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/gastrobot_bringup/package.ps1'
+[18.898s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/gastrobot_bringup/package.dsv'
+[18.901s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/gastrobot_bringup/package.sh'
+[18.903s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/gastrobot_bringup/package.bash'
+[18.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/gastrobot_bringup/package.zsh'
+[18.906s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gastrobot/gastrobot_ws/install/gastrobot_bringup/share/colcon-core/packages/gastrobot_bringup)
+[18.908s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation' for CMake module files
+[18.912s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gastrobot/gastrobot_ws/src/gastrobot_navigation' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_navigation build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/install.log --single-version-externally-managed install_data
+[18.914s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation' for CMake config files
+[18.918s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib'
+[18.919s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/bin'
+[18.919s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/pkgconfig/gastrobot_navigation.pc'
+[18.920s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages'
+[18.920s] Level 1:colcon.colcon_core.shell:create_environment_hook('gastrobot_navigation', 'pythonpath')
+[18.921s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation/hook/pythonpath.ps1'
+[18.923s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation/hook/pythonpath.dsv'
+[18.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation/hook/pythonpath.sh'
+[18.928s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/bin'
+[18.928s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gastrobot_navigation)
+[18.929s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation/package.ps1'
+[18.931s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation/package.dsv'
+[18.933s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation/package.sh'
+[18.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation/package.bash'
+[18.937s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation/package.zsh'
+[18.938s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/colcon-core/packages/gastrobot_navigation)
+[18.941s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gastrobot/gastrobot_ws/src/rplidar_ros' with build type 'ament_cmake'
+[18.942s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gastrobot/gastrobot_ws/src/rplidar_ros'
+[18.942s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[18.943s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[18.995s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gastrobot/gastrobot_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy /usr/bin/cmake --build /home/gastrobot/gastrobot_ws/build/rplidar_ros -- -j4 -l4
+[19.508s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gastrobot/gastrobot_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy /usr/bin/cmake --build /home/gastrobot/gastrobot_ws/build/rplidar_ros -- -j4 -l4
+[19.574s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gastrobot/gastrobot_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy /usr/bin/cmake --install /home/gastrobot/gastrobot_ws/build/rplidar_ros
+[19.746s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[19.748s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros' for CMake module files
+[19.749s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gastrobot/gastrobot_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gastrobot/gastrobot_ws/install/gastrobot_perception:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation:/home/gastrobot/gastrobot_ws/install/gastrobot_gui:/home/gastrobot/gastrobot_ws/install/gastrobot_control:/home/gastrobot/gastrobot_ws/install/gastrobot_bringup:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_control:/home/gastrobot/gastrobot_ws_clean/install/gastrobot_bringup:/opt/ros/jazzy /usr/bin/cmake --install /home/gastrobot/gastrobot_ws/build/rplidar_ros
+[19.753s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros' for CMake config files
+[19.755s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[19.756s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[19.758s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[19.760s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[19.763s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros/lib'
+[19.763s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros/bin'
+[19.763s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[19.764s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros/lib/python3.12/site-packages'
+[19.766s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros/bin'
+[19.767s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[19.769s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[19.771s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.sh'
+[19.773s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.bash'
+[19.775s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[19.776s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[19.779s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[19.780s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros' for CMake module files
+[19.783s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros' for CMake config files
+[19.785s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[19.786s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[19.788s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[19.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[19.792s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros/lib'
+[19.793s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros/bin'
+[19.793s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[19.794s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros/lib/python3.12/site-packages'
+[19.795s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/rplidar_ros/bin'
+[19.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[19.798s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[19.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.sh'
+[19.803s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.bash'
+[19.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[19.807s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gastrobot/gastrobot_ws/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[22.769s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gastrobot/gastrobot_ws/src/gastrobot_perception': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_perception build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_perception/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_perception/install.log --single-version-externally-managed install_data
+[26.135s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_perception' for CMake module files
+[26.136s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gastrobot/gastrobot_ws/src/gastrobot_perception' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_perception build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_perception/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_perception/install.log --single-version-externally-managed install_data
+[26.138s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_perception' for CMake config files
+[26.141s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib'
+[26.142s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/bin'
+[26.142s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/pkgconfig/gastrobot_perception.pc'
+[26.143s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages'
+[26.143s] Level 1:colcon.colcon_core.shell:create_environment_hook('gastrobot_perception', 'pythonpath')
+[26.144s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception/hook/pythonpath.ps1'
+[26.146s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception/hook/pythonpath.dsv'
+[26.148s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception/hook/pythonpath.sh'
+[26.151s] Level 1:colcon.colcon_core.environment:checking '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/bin'
+[26.152s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gastrobot_perception)
+[26.153s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception/package.ps1'
+[26.155s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception/package.dsv'
+[26.157s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception/package.sh'
+[26.159s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception/package.bash'
+[26.162s] INFO:colcon.colcon_core.shell:Creating package script '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/gastrobot_perception/package.zsh'
+[26.171s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gastrobot/gastrobot_ws/install/gastrobot_perception/share/colcon-core/packages/gastrobot_perception)
+[26.172s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[26.174s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[26.174s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[26.175s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[26.206s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[26.206s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[26.206s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[26.232s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[26.233s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gastrobot/gastrobot_ws/install/local_setup.ps1'
+[26.237s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gastrobot/gastrobot_ws/install/_local_setup_util_ps1.py'
+[26.242s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gastrobot/gastrobot_ws/install/setup.ps1'
+[26.249s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gastrobot/gastrobot_ws/install/local_setup.sh'
+[26.253s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gastrobot/gastrobot_ws/install/_local_setup_util_sh.py'
+[26.272s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gastrobot/gastrobot_ws/install/setup.sh'
+[26.283s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gastrobot/gastrobot_ws/install/local_setup.bash'
+[26.286s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gastrobot/gastrobot_ws/install/setup.bash'
+[26.298s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gastrobot/gastrobot_ws/install/local_setup.zsh'
+[26.301s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gastrobot/gastrobot_ws/install/setup.zsh'

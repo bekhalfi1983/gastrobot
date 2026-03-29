@@ -1,0 +1,26 @@
+[10.398s] Invoking command in '/home/gastrobot/gastrobot_ws/build/gastrobot_navigation': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build --no-deps symlink_data
+[13.347s] running develop
+[15.022s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[15.023s]   self.local_index = Environment(self.shadow_path + sys.path)
+[15.464s] running egg_info
+[15.465s] creating gastrobot_navigation.egg-info
+[15.666s] writing gastrobot_navigation.egg-info/PKG-INFO
+[15.670s] writing dependency_links to gastrobot_navigation.egg-info/dependency_links.txt
+[15.671s] writing entry points to gastrobot_navigation.egg-info/entry_points.txt
+[15.671s] writing requirements to gastrobot_navigation.egg-info/requires.txt
+[15.672s] writing top-level names to gastrobot_navigation.egg-info/top_level.txt
+[15.672s] writing manifest file 'gastrobot_navigation.egg-info/SOURCES.txt'
+[16.082s] reading manifest file 'gastrobot_navigation.egg-info/SOURCES.txt'
+[16.085s] writing manifest file 'gastrobot_navigation.egg-info/SOURCES.txt'
+[16.303s] running build_ext
+[16.304s] Creating /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot-navigation.egg-link (link to .)
+[16.305s] Installing mission_manager script to /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/gastrobot_navigation
+[16.308s] 
+[16.312s] Installed /home/gastrobot/gastrobot_ws/build/gastrobot_navigation
+[16.312s] running symlink_data
+[16.313s] creating /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/ament_index
+[16.314s] creating /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/ament_index/resource_index
+[16.319s] creating /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/ament_index/resource_index/packages
+[16.321s] symbolically linking /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/resource/gastrobot_navigation -> /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/ament_index/resource_index/packages
+[16.325s] symbolically linking /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/package.xml -> /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation
+[16.641s] Invoked command in '/home/gastrobot/gastrobot_ws/build/gastrobot_navigation' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build --no-deps symlink_data

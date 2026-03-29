@@ -1,0 +1,19 @@
+[5.145s] Invoking command in '/home/gastrobot/gastrobot_ws/src/gastrobot_perception': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_perception build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_perception/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_perception/install.log --single-version-externally-managed install_data
+[6.704s] running egg_info
+[6.830s] writing ../../build/gastrobot_perception/gastrobot_perception.egg-info/PKG-INFO
+[6.831s] writing dependency_links to ../../build/gastrobot_perception/gastrobot_perception.egg-info/dependency_links.txt
+[6.832s] writing requirements to ../../build/gastrobot_perception/gastrobot_perception.egg-info/requires.txt
+[6.833s] writing top-level names to ../../build/gastrobot_perception/gastrobot_perception.egg-info/top_level.txt
+[7.087s] reading manifest file '../../build/gastrobot_perception/gastrobot_perception.egg-info/SOURCES.txt'
+[7.090s] writing manifest file '../../build/gastrobot_perception/gastrobot_perception.egg-info/SOURCES.txt'
+[7.091s] running build
+[7.091s] running build_py
+[7.092s] running install
+[7.118s] running install_lib
+[7.247s] running install_data
+[7.247s] running install_egg_info
+[7.379s] removing '/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages/gastrobot_perception-0.0.0-py3.12.egg-info' (and everything under it)
+[7.380s] Copying ../../build/gastrobot_perception/gastrobot_perception.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages/gastrobot_perception-0.0.0-py3.12.egg-info
+[7.386s] running install_scripts
+[8.330s] writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_perception/install.log'
+[8.481s] Invoked command in '/home/gastrobot/gastrobot_ws/src/gastrobot_perception' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_perception/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_perception build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_perception/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_perception/install.log --single-version-externally-managed install_data

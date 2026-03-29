@@ -1,0 +1,2 @@
+[console_scripts]
+mission_manager = gastrobot_navigation.mission_manager_node:main

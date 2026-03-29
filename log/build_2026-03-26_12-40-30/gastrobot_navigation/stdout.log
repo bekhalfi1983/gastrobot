@@ -1,0 +1,35 @@
+running develop
+Removing /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot-navigation.egg-link (link to .)
+running egg_info
+writing ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/PKG-INFO
+writing dependency_links to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/dependency_links.txt
+writing entry points to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/entry_points.txt
+writing requirements to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/requires.txt
+writing top-level names to ../../build/gastrobot_navigation/gastrobot_navigation.egg-info/top_level.txt
+reading manifest file '../../build/gastrobot_navigation/gastrobot_navigation.egg-info/SOURCES.txt'
+writing manifest file '../../build/gastrobot_navigation/gastrobot_navigation.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build
+creating /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build/lib
+creating /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build/lib/gastrobot_navigation
+copying gastrobot_navigation/mission_manager.py -> /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build/lib/gastrobot_navigation
+copying gastrobot_navigation/mission_manager_node.py -> /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build/lib/gastrobot_navigation
+copying gastrobot_navigation/__init__.py -> /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build/lib/gastrobot_navigation
+running install
+running install_lib
+creating /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation
+copying /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build/lib/gastrobot_navigation/mission_manager.py -> /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation
+copying /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build/lib/gastrobot_navigation/mission_manager_node.py -> /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation
+copying /home/gastrobot/gastrobot_ws/build/gastrobot_navigation/build/lib/gastrobot_navigation/__init__.py -> /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation
+byte-compiling /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation/mission_manager.py to mission_manager.cpython-312.pyc
+byte-compiling /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation/mission_manager_node.py to mission_manager_node.cpython-312.pyc
+byte-compiling /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation/__init__.py to __init__.cpython-312.pyc
+running install_data
+copying resource/gastrobot_navigation -> /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/ament_index/resource_index/packages
+copying package.xml -> /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/share/gastrobot_navigation
+running install_egg_info
+Copying ../../build/gastrobot_navigation/gastrobot_navigation.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/python3.12/site-packages/gastrobot_navigation-0.0.0-py3.12.egg-info
+running install_scripts
+Installing mission_manager script to /home/gastrobot/gastrobot_ws/install/gastrobot_navigation/lib/gastrobot_navigation
+writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_navigation/install.log'

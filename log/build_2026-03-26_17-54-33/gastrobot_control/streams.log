@@ -1,0 +1,30 @@
+[10.819s] Invoking command in '/home/gastrobot/gastrobot_ws/src/gastrobot_control': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_control build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_control/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_control/install.log --single-version-externally-managed install_data
+[13.393s] running egg_info
+[13.597s] writing ../../build/gastrobot_control/gastrobot_control.egg-info/PKG-INFO
+[13.599s] writing dependency_links to ../../build/gastrobot_control/gastrobot_control.egg-info/dependency_links.txt
+[13.601s] writing entry points to ../../build/gastrobot_control/gastrobot_control.egg-info/entry_points.txt
+[13.603s] writing requirements to ../../build/gastrobot_control/gastrobot_control.egg-info/requires.txt
+[13.605s] writing top-level names to ../../build/gastrobot_control/gastrobot_control.egg-info/top_level.txt
+[14.033s] reading manifest file '../../build/gastrobot_control/gastrobot_control.egg-info/SOURCES.txt'
+[14.041s] writing manifest file '../../build/gastrobot_control/gastrobot_control.egg-info/SOURCES.txt'
+[14.043s] running build
+[14.043s] running build_py
+[14.045s] running install
+[14.082s] running install_lib
+[14.308s] running install_data
+[14.309s] running install_egg_info
+[14.541s] removing '/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages/gastrobot_control-0.0.0-py3.12.egg-info' (and everything under it)
+[14.544s] Copying ../../build/gastrobot_control/gastrobot_control.egg-info to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages/gastrobot_control-0.0.0-py3.12.egg-info
+[14.556s] running install_scripts
+[16.187s] Installing diff_drive_controller script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[16.192s] Installing esp32_bridge_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[16.194s] Installing gui_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[16.199s] Installing imu_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[16.200s] Installing joystick_control_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[16.212s] Installing lift_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[16.217s] Installing lift_serial_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[16.225s] Installing motor_drive_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[16.230s] Installing ultrasonic_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[16.233s] Installing wheel_odometry_node script to /home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/gastrobot_control
+[16.237s] writing list of installed files to '/home/gastrobot/gastrobot_ws/build/gastrobot_control/install.log'
+[17.557s] Invoked command in '/home/gastrobot/gastrobot_ws/src/gastrobot_control' returned '0': PYTHONPATH=/home/gastrobot/gastrobot_ws/build/gastrobot_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gastrobot/gastrobot_ws/install/gastrobot_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gastrobot_control build --build-base /home/gastrobot/gastrobot_ws/build/gastrobot_control/build install --record /home/gastrobot/gastrobot_ws/build/gastrobot_control/install.log --single-version-externally-managed install_data
