@@ -13,21 +13,19 @@ class JoystickControlNode(Node):
     def __init__(self):
         super().__init__('joystick_control_node')
 
-        # ================= SAFE LIMITS =================
-        self.max_linear = 0.14
-        self.max_angular = 0.55
+        # ================= LIMITS =================
+        self.max_linear = 0.45
+        self.max_angular = 1.2
 
-        self.deadzone = 0.08
+        self.deadzone = 0.05
 
-        # ================= SMOOTHING =================
-        self.alpha = 0.04
+        # ================= ACCEL =================
+        self.max_accel = 0.08
+        self.max_turn_accel = 0.15
 
-        # ================= ACCELERATION =================
-        self.max_accel = 0.01          # 🔥 VERY SOFT START
-        self.max_turn_accel = 0.04
-
-        # ================= EXPO =================
-        self.expo = 0.85              # 🔥 VERY SMOOTH RESPONSE
+        # ================= MIN COMMAND (KEY FIX) =================
+        self.min_linear = 0.08   # 🔥 prevents motor jitter
+        self.min_angular = 0.1
 
         # ================= STATE =================
         self.linear_prev = 0.0
@@ -43,15 +41,11 @@ class JoystickControlNode(Node):
         self.last_triangle = 0
         self.last_x = 0
 
-        self.get_logger().info("Joystick Control READY (ULTRA SMOOTH MODE)")
+        self.get_logger().info("Joystick Control READY (STABLE MODE)")
 
     # ================= DEADZONE =================
     def dz(self, val):
         return 0.0 if abs(val) < self.deadzone else val
-
-    # ================= STRONG EXPO =================
-    def expo_curve(self, x):
-        return (1 - self.expo) * x + self.expo * (x ** 3)
 
     # ================= ACCEL LIMIT =================
     def limit_accel(self, target, current, max_delta):
@@ -60,38 +54,38 @@ class JoystickControlNode(Node):
             delta = max_delta if delta > 0 else -max_delta
         return current + delta
 
+    # ================= MIN OUTPUT FIX =================
+    def apply_minimum(self, value, minimum):
+        if value == 0.0:
+            return 0.0
+        if abs(value) < minimum:
+            return minimum if value > 0 else -minimum
+        return value
+
     # ================= CALLBACK =================
     def joy_callback(self, msg):
 
-        # -------- AXES --------
-        forward_raw = self.dz(msg.axes[1])
-        turn_raw = self.dz(msg.axes[3])
-
-        # -------- EXPO --------
-        forward = self.expo_curve(forward_raw)
-        turn = self.expo_curve(turn_raw)
+        # -------- INPUT --------
+        forward = self.dz(msg.axes[1])
+        turn = self.dz(msg.axes[3])
 
         # -------- SPEED MODES --------
-        if msg.buttons[4]:       # L1 → precision
-            self.speed_mode = 0.3
-        elif msg.buttons[5]:     # R1 → normal
+        if msg.buttons[4]:
+            self.speed_mode = 0.5
+        elif msg.buttons[5]:
             self.speed_mode = 1.0
 
-        # -------- DYNAMIC LIMIT (ANTI-WHEELIE) --------
-        # reduces top speed when stick is pushed hard
-        dynamic_limit = 1.0 - 0.4 * abs(forward)
-
         # -------- TARGET --------
-        linear_target = self.max_linear * self.speed_mode * forward * dynamic_limit
+        linear_target = self.max_linear * self.speed_mode * forward
         angular_target = self.max_angular * self.speed_mode * turn
 
-        # -------- SOFT START --------
+        # -------- ACCEL LIMIT --------
         linear = self.limit_accel(linear_target, self.linear_prev, self.max_accel)
         angular = self.limit_accel(angular_target, self.angular_prev, self.max_turn_accel)
 
-        # -------- EXTRA SMOOTH --------
-        linear = self.alpha * linear + (1 - self.alpha) * self.linear_prev
-        angular = self.alpha * angular + (1 - self.alpha) * self.angular_prev
+        # -------- MINIMUM FORCE (KEY) --------
+        linear = self.apply_minimum(linear, self.min_linear)
+        angular = self.apply_minimum(angular, self.min_angular)
 
         self.linear_prev = linear
         self.angular_prev = angular
@@ -119,7 +113,6 @@ class JoystickControlNode(Node):
         msg = String()
         msg.data = cmd
         self.lift_pub.publish(msg)
-        self.get_logger().info(f"Lift: {cmd}")
 
 
 def main():

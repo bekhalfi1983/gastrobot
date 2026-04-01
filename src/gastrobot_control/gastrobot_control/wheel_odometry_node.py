@@ -1,108 +1,197 @@
+#!/usr/bin/env python3
+
+import math
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int32MultiArray
 from nav_msgs.msg import Odometry
-from geometry_msgs.msg import Quaternion
-import math
-import time
+from geometry_msgs.msg import TransformStamped
+from tf2_ros import TransformBroadcaster
 
 
-class WheelOdom(Node):
+class WheelOdometryNode(Node):
     def __init__(self):
         super().__init__('wheel_odometry_node')
 
-        # ===== PARAMETERS =====
-        self.wheel_radius = 0.072  # meters
-        self.wheel_base = 0.56     # distance between wheels
-        self.cpr = 1425            # encoder counts per revolution
+        # ================= PARAMETERS =================
+        self.declare_parameter('wheel_radius', 0.072)     # meters
+        self.declare_parameter('wheel_base', 0.40)        # meters
+        self.declare_parameter('ticks_per_rev', 712.0)    # ESP32 currently uses CPR 712
+        self.declare_parameter('odom_frame', 'odom')
+        self.declare_parameter('base_frame', 'base_link')
+        self.declare_parameter('publish_tf', True)
+        self.declare_parameter('publish_rate', 30.0)
 
-        # ===== STATE =====
+        self.wheel_radius = float(self.get_parameter('wheel_radius').value)
+        self.wheel_base = float(self.get_parameter('wheel_base').value)
+        self.ticks_per_rev = float(self.get_parameter('ticks_per_rev').value)
+        self.odom_frame = str(self.get_parameter('odom_frame').value)
+        self.base_frame = str(self.get_parameter('base_frame').value)
+        self.publish_tf = bool(self.get_parameter('publish_tf').value)
+        self.publish_rate = float(self.get_parameter('publish_rate').value)
+
+        # ================= STATE =================
         self.x = 0.0
         self.y = 0.0
         self.theta = 0.0
 
-        self.last_time = time.time()
+        self.current_left_ticks = None
+        self.current_right_ticks = None
+        self.prev_left_ticks = None
+        self.prev_right_ticks = None
+        self.have_ticks = False
 
-        self.prev_l = 0
-        self.prev_r = 0
+        self.last_time = self.get_clock().now()
 
-        # ===== SUBSCRIBE =====
-        self.sub = self.create_subscription(
+        # ================= ROS =================
+        self.sub_ticks = self.create_subscription(
             Int32MultiArray,
             '/wheel_ticks',
-            self.tick_callback,
+            self.wheel_ticks_callback,
             10
         )
 
-        # ===== PUBLISH =====
-        self.pub = self.create_publisher(Odometry, '/wheel_odom', 10)
+        self.pub_odom = self.create_publisher(Odometry, '/odom', 10)
+        self.tf_broadcaster = TransformBroadcaster(self)
 
-        self.get_logger().info("Wheel Odometry Node Started")
+        timer_period = 1.0 / self.publish_rate
+        self.timer = self.create_timer(timer_period, self.update_odometry)
 
+        self.get_logger().info('Wheel Odometry Node Started')
 
-    def tick_callback(self, msg):
-        l_ticks = msg.data[0]
-        r_ticks = msg.data[1]
-
-        # ===== TIME =====
-        now = time.time()
-        dt = now - self.last_time
-        self.last_time = now
-
-        if dt == 0:
+    def wheel_ticks_callback(self, msg: Int32MultiArray):
+        if len(msg.data) < 2:
+            self.get_logger().warn('Received /wheel_ticks with fewer than 2 values')
             return
 
-        # ===== DELTA TICKS =====
-        dl = l_ticks - self.prev_l
-        dr = r_ticks - self.prev_r
+        # These are TOTAL / cumulative counts from the bridge
+        self.current_left_ticks = int(msg.data[0])
+        self.current_right_ticks = int(msg.data[1])
+        self.have_ticks = True
 
-        self.prev_l = l_ticks
-        self.prev_r = r_ticks
+        # Initialize previous values on first message
+        if self.prev_left_ticks is None or self.prev_right_ticks is None:
+            self.prev_left_ticks = self.current_left_ticks
+            self.prev_right_ticks = self.current_right_ticks
 
-        # ===== DISTANCE =====
-        dist_l = (dl / self.cpr) * 2 * math.pi * self.wheel_radius
-        dist_r = (dr / self.cpr) * 2 * math.pi * self.wheel_radius
+    def yaw_to_quaternion(self, yaw: float):
+        qz = math.sin(yaw / 2.0)
+        qw = math.cos(yaw / 2.0)
+        return qz, qw
 
-        # ===== KINEMATICS =====
-        d_center = (dist_l + dist_r) / 2.0
-        d_theta = (dist_r - dist_l) / self.wheel_base
+    def update_odometry(self):
+        current_time = self.get_clock().now()
+        dt = (current_time - self.last_time).nanoseconds / 1e9
 
-        # ===== UPDATE POSE =====
-        self.x += d_center * math.cos(self.theta)
-        self.y += d_center * math.sin(self.theta)
+        if dt <= 0.0:
+            return
+
+        # Default: no movement
+        delta_left_ticks = 0
+        delta_right_ticks = 0
+
+        if self.have_ticks and self.current_left_ticks is not None and self.current_right_ticks is not None:
+            # IMPORTANT:
+            # /wheel_ticks is cumulative, so we must subtract previous totals
+            delta_left_ticks = self.current_left_ticks - self.prev_left_ticks
+            delta_right_ticks = self.current_right_ticks - self.prev_right_ticks
+
+            self.prev_left_ticks = self.current_left_ticks
+            self.prev_right_ticks = self.current_right_ticks
+
+        # Convert ticks to wheel travel
+        meters_per_tick = (2.0 * math.pi * self.wheel_radius) / self.ticks_per_rev
+        d_left = float(delta_left_ticks) * meters_per_tick
+        d_right = float(delta_right_ticks) * meters_per_tick
+
+        d_center = (d_left + d_right) / 2.0
+        d_theta = (d_right - d_left) / self.wheel_base
+
+        # Midpoint integration
+        theta_mid = self.theta + (d_theta / 2.0)
+        self.x += d_center * math.cos(theta_mid)
+        self.y += d_center * math.sin(theta_mid)
         self.theta += d_theta
 
-        # ===== VELOCITY =====
+        # Normalize theta
+        self.theta = math.atan2(math.sin(self.theta), math.cos(self.theta))
+
         vx = d_center / dt
         vth = d_theta / dt
 
-        # ===== QUATERNION =====
-        q = Quaternion()
-        q.z = math.sin(self.theta / 2.0)
-        q.w = math.cos(self.theta / 2.0)
+        qz, qw = self.yaw_to_quaternion(self.theta)
 
-        # ===== ODOM MSG =====
+        # ================= ODOM MESSAGE =================
         odom = Odometry()
-        odom.header.stamp = self.get_clock().now().to_msg()
-        odom.header.frame_id = "odom"
-        odom.child_frame_id = "base_link"
+        odom.header.stamp = current_time.to_msg()
+        odom.header.frame_id = self.odom_frame
+        odom.child_frame_id = self.base_frame
 
         odom.pose.pose.position.x = self.x
         odom.pose.pose.position.y = self.y
-        odom.pose.pose.orientation = q
+        odom.pose.pose.position.z = 0.0
+
+        odom.pose.pose.orientation.x = 0.0
+        odom.pose.pose.orientation.y = 0.0
+        odom.pose.pose.orientation.z = qz
+        odom.pose.pose.orientation.w = qw
 
         odom.twist.twist.linear.x = vx
+        odom.twist.twist.linear.y = 0.0
         odom.twist.twist.angular.z = vth
 
-        self.pub.publish(odom)
+        # Reasonable planar covariance
+        odom.pose.covariance = [
+            0.02, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.02, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 99999.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 0.0, 99999.0, 0.0, 0.0,
+            0.0, 0.0, 0.0, 0.0, 99999.0, 0.0,
+            0.0, 0.0, 0.0, 0.0, 0.0, 0.02
+        ]
+
+        odom.twist.covariance = [
+            0.02, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.02, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 99999.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 0.0, 99999.0, 0.0, 0.0,
+            0.0, 0.0, 0.0, 0.0, 99999.0, 0.0,
+            0.0, 0.0, 0.0, 0.0, 0.0, 0.02
+        ]
+
+        self.pub_odom.publish(odom)
+
+        # ================= TF =================
+        if self.publish_tf:
+            t = TransformStamped()
+            t.header.stamp = current_time.to_msg()
+            t.header.frame_id = self.odom_frame
+            t.child_frame_id = self.base_frame
+
+            t.transform.translation.x = self.x
+            t.transform.translation.y = self.y
+            t.transform.translation.z = 0.0
+
+            t.transform.rotation.x = 0.0
+            t.transform.rotation.y = 0.0
+            t.transform.rotation.z = qz
+            t.transform.rotation.w = qw
+
+            self.tf_broadcaster.sendTransform(t)
+
+        self.last_time = current_time
 
 
 def main(args=None):
     rclpy.init(args=args)
-    node = WheelOdom()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+    node = WheelOdometryNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':

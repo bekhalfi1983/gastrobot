@@ -1,13 +1,37 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from launch.actions import SetEnvironmentVariable
-from launch.actions import TimerAction
+from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from ament_index_python.packages import get_package_share_directory
+import os
+
 
 def generate_launch_description():
+
+    bringup_share = get_package_share_directory('gastrobot_bringup')
+    slam_params_file = os.path.join(bringup_share, 'config', 'slam_params.yaml')
+
+    # ================================
+    # LIDAR
+    # ================================
+    rplidar = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory('rplidar_ros'),
+                'launch',
+                'rplidar_c1_launch.py'
+            )
+        ),
+        launch_arguments={
+            'serial_port': '/dev/ttyUSB1',
+            'serial_baudrate': '460800'
+        }.items()
+    )
+
     return LaunchDescription([
 
         # ================================
-        # DISPLAY (FOR GUI)
+        # DISPLAY (FOR GUI ON PI)
         # ================================
         SetEnvironmentVariable('DISPLAY', ':0'),
 
@@ -30,13 +54,13 @@ def generate_launch_description():
             name='esp32_bridge_node',
             output='screen',
             parameters=[{
-                "port": "/dev/serial/by-id/usb-Silicon_Labs_CP2102N_USB_to_UART_Bridge_Controller_a67f795ee971f0119cc3f99e1045c30f-if00-port0",
+                "port": "/dev/ttyUSB0",
                 "baud": 115200
             }]
         ),
 
         # ================================
-        # LIFT (ARDUINO)
+        # LIFT NODE
         # ================================
         Node(
             package='gastrobot_control',
@@ -50,7 +74,7 @@ def generate_launch_description():
         ),
 
         # ================================
-        # GUI NODE (FULLSCREEN)
+        # GUI
         # ================================
         Node(
             package='gastrobot_gui',
@@ -60,51 +84,59 @@ def generate_launch_description():
         ),
 
         # ================================
-        # JOYSTICK INPUT
-	# ================================
-	Node(
-	    package='joy',
-	    executable='joy_node',
-	    name='joy_node',
-	    output='screen'
-	),
+        # JOYSTICK
+        # ================================
+        Node(
+            package='joy',
+            executable='joy_node',
+            name='joy_node',
+            output='screen'
+        ),
 
-	# ================================
-	# YOUR CUSTOM NODE
-	# ================================
-	Node(
-	    package='gastrobot_control',
-	    executable='joystick_control_node',
-	    name='joystick_control_node',
-	    output='screen'
-	),
-	Node(
-	    package='gastrobot_control',
-	    executable='imu_node',
-	    name='imu_node',
-	    output='screen'
-	),
+        # ================================
+        # JOYSTICK CONTROL
+        # ================================
+        Node(
+            package='gastrobot_control',
+            executable='joystick_control_node',
+            name='joystick_control_node',
+            output='screen'
+        ),
 
-	Node(
-	    package='gastrobot_control',
-	    executable='wheel_odometry_node',
-	    name='wheel_odometry_node',
-	    output='screen'
-	),
-	# ================= EKF (DELAYED) =================
-	        TimerAction(
-	            period=3.0,
-	            actions=[
-	                Node(
-	                    package='robot_localization',
-	                    executable='ekf_node',
-	                    name='ekf_node',
-	                    output='screen',
-	                    parameters=[
-	                        '/home/gastrobot/gastrobot_ws/src/gastrobot_control/config/ekf.yaml'
-	                    ]
-	                )
-	            ]
-	        ),
+        # ================================
+        # WHEEL ODOMETRY
+        # publishes /odom and odom->base_link TF
+        # ================================
+        Node(
+            package='gastrobot_control',
+            executable='wheel_odometry_node',
+            name='wheel_odometry_node',
+            output='screen'
+        ),
 
+        # ================================
+        # STATIC TF: base_link -> laser
+        # ================================
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='base_to_laser_tf',
+            arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'laser']
+        ),
+
+        # ================================
+        # LIDAR
+        # ================================
+        rplidar,
+
+        # ================================
+        # SLAM TOOLBOX
+        # ================================
+        Node(
+            package='slam_toolbox',
+            executable='async_slam_toolbox_node',
+            name='slam_toolbox',
+            output='screen',
+            parameters=[slam_params_file]
+        ),
     ])

@@ -35,6 +35,7 @@ setup(
        'joystick_control_node = gastrobot_control.joystick_control_node:main',   
        'gui_node = gastrobot_control.gui_node:main',
        'pid_tuner_node = gastrobot_control.pid_tuner_node:main',
+       'pid_test_node = gastrobot_control.pid_test_node:main',
        ],
     },
 
