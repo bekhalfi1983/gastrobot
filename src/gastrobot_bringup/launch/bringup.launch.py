@@ -23,7 +23,7 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            'serial_port': '/dev/ttyUSB1',
+            'serial_port':'/dev/serial/by-id/usb-Silicon_Labs_CP2102N_USB_to_UART_Bridge_Controller_a09f9f7feb73ef11b0c8ca8c8fcc3fa0-if00-port0',
             'serial_baudrate': '460800'
         }.items()
     )
