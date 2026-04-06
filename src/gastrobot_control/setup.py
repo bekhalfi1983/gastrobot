@@ -28,7 +28,6 @@ setup(
        'motor_drive_node = gastrobot_control.motor_drive_node:main',
        'lift_node = gastrobot_control.lift_node:main',
        'wheel_odometry_node = gastrobot_control.wheel_odometry_node:main',
-       'imu_node = gastrobot_control.imu_node:main',
        'lift_serial_node = gastrobot_control.lift_serial_node:main',
        'ultrasonic_node = gastrobot_control.ultrasonic_node:main',
        'esp32_bridge_node = gastrobot_control.esp32_bridge_node:main',
@@ -36,6 +35,8 @@ setup(
        'gui_node = gastrobot_control.gui_node:main',
        'pid_tuner_node = gastrobot_control.pid_tuner_node:main',
        'pid_test_node = gastrobot_control.pid_test_node:main',
+       'bno08x_uart_node = gastrobot_control.bno08x_uart_node:main',
+       'ui_node = gastrobot_control.ui_node:main',
        ],
     },
 

@@ -3,7 +3,7 @@
 import serial
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Int32MultiArray
+from std_msgs.msg import Int32MultiArray, Float32
 from geometry_msgs.msg import Twist
 
 
@@ -23,9 +23,13 @@ class ESP32BridgeNode(Node):
 
         self.ser = None
 
+        # ================= PUBLISHERS =================
         self.tick_pub = self.create_publisher(Int32MultiArray, '/wheel_ticks', 10)
+        self.battery_pub = self.create_publisher(Float32, '/battery_voltage', 10)
 
+        # ================= SUBSCRIBERS =================
         self.create_subscription(Twist, '/cmd_vel', self.cmd_vel_callback, 10)
+
         self.timer = self.create_timer(0.02, self.read_serial)
 
         self.get_logger().info('=== ESP32 BRIDGE NODE RUNNING ===')
@@ -78,9 +82,10 @@ class ESP32BridgeNode(Node):
                 if raw.startswith('DATA,'):
                     parts = raw.split(',')
 
-                    if len(parts) >= 12:
+                    # We now expect battery as LAST field
+                    if len(parts) >= 13:
                         try:
-                            # NEW: use REAL cumulative counts
+                            # ===== ENCODERS =====
                             left = int(parts[8])
                             right = int(parts[9])
 
@@ -88,8 +93,15 @@ class ESP32BridgeNode(Node):
                             msg.data = [left, right]
                             self.tick_pub.publish(msg)
 
-                        except:
-                            self.get_logger().warn(f'Bad DATA: {raw}')
+                            # ===== BATTERY =====
+                            battery_voltage = float(parts[-1])
+
+                            batt_msg = Float32()
+                            batt_msg.data = battery_voltage
+                            self.battery_pub.publish(batt_msg)
+
+                        except Exception as e:
+                            self.get_logger().warn(f'Bad DATA: {raw} | {e}')
 
         except Exception as e:
             self.get_logger().error(f'Serial error: {e}')
