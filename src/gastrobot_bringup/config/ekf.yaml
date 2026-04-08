@@ -5,74 +5,38 @@ ekf_filter_node:
     two_d_mode: true
     publish_tf: true
 
+    # Coordinate Frames - MUST MATCH YOUR URDF
     map_frame: map
     odom_frame: odom
-    base_link_frame: base_link
+    base_link_frame: base_footprint # Changed from base_link to match URDF root
     world_frame: odom
 
     # =============================================================
-    # WHEEL ODOMETRY (Fuse Velocity Only)
+    # WHEEL ODOMETRY (Fuse Velocity)
     # =============================================================
     odom0: /odom
-    odom0_config: [true, true, false, # Position (X, Y, Z)
+    # Fusing X velocity and Yaw velocity for smoother movement
+    odom0_config: [false, false, false, # Position (X, Y, Z)
                    false, false, false, # Orientation (R, P, Y)
-                   true,  false, false, # Linear Velocity (X)
-                   false, false, true,  # Angular Velocity (Z)
+                   true,  false, false, # Linear Velocity (X) - MUST BE TRUE
+                   false, false, true,  # Angular Velocity (Z) - MUST BE TRUE
                    false, false, false] # Acceleration
 
     odom0_differential: false
-    odom0_relative: false
+    odom0_relative: true  # Changed to true for velocity integration
     odom0_queue_size: 10
 
     # =============================================================
-    # IMU (Fuse Angular Velocity/Yaw Rate Only)
+    # IMU (Fuse Orientation and Yaw Rate)
     # =============================================================
     imu0: /imu/data
-    imu0_config: [false, false, false, # Position
-                  false, false, true, # Orientation
-                  false, false, false, # Velocity
+    imu0_config: [false, false, false, 
+                  false, false, true,  # Orientation (Yaw)
+                  false, false, false, 
                   false, false, true,  # Angular Velocity (Yaw Rate)
-                  false, false, false] # Acceleration
+                  false, false, false] 
 
     imu0_differential: false
-    imu0_relative: false
+    imu0_relative: true
     imu0_queue_size: 10
     imu0_remove_gravitational_acceleration: true
-
-    # =============================================================
-    # PROCESS NOISE COVARIANCE (15x15)
-    # =============================================================
-    process_noise_covariance: [0.01, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
-                               0.0,  0.01, 0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
-                               0.0,  0.0,  0.02, 0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
-                               0.0,  0.0,  0.0,  0.01, 0.0,  0.0,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
-                               0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
-                               0.0,  0.0,  0.0,  0.0,  0.0,  0.02, 0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
-                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.02,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
-                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.02,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
-                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.02,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,
-                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.01,  0.0,   0.0,   0.0,   0.0,   0.0,
-                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,   0.01,  0.0,   0.0,   0.0,   0.0,
-                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,   0.0,   0.01,  0.0,   0.0,   0.0,
-                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.01,  0.0,   0.0,
-                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.01,  0.0,
-                               0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.0,   0.01]
-
-    # =============================================================
-    # INITIAL ESTIMATE COVARIANCE (15x15)
-    # =============================================================
-    initial_estimate_covariance: [0.1,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,  0.0,  0.0,
-                                  0.0,  0.1,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,  0.0,  0.0,
-                                  0.0,  0.0,  0.1,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,  0.0,  0.0,
-                                  0.0,  0.0,  0.0,  0.05, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,  0.0,  0.0,
-                                  0.0,  0.0,  0.0,  0.0,  0.05, 0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,  0.0,  0.0,
-                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.05, 0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,  0.0,  0.0,
-                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.1,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,  0.0,  0.0,
-                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.1,  0.0,  0.0,   0.0,   0.0,   0.0,  0.0,  0.0,
-                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.1,  0.0,   0.0,   0.0,   0.0,  0.0,  0.0,
-                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.05,  0.0,   0.0,   0.0,  0.0,  0.0,
-                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.05,  0.0,   0.0,  0.0,  0.0,
-                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.05,  0.0,  0.0,  0.0,
-                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.02, 0.0,  0.0,
-                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,  0.02, 0.0,
-                                  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,   0.0,  0.0,  0.02]
