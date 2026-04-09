@@ -24,8 +24,8 @@ def generate_launch_description():
         # 1. Skeleton & Localization
         Node(package='robot_state_publisher', executable='robot_state_publisher',
              parameters=[{'robot_description': robot_description_config, 'use_sim_time': use_sim_time}]),
-        Node(package='robot_localization', executable='ekf_node', name='ekf_filter_node',
-             parameters=[ekf_params_file, {'use_sim_time': use_sim_time}]),
+#        Node(package='robot_localization', executable='ekf_node', name='ekf_filter_node',
+ #            parameters=[ekf_params_file, {'use_sim_time': use_sim_time}]),
 
         # 2. Hardware (BNO08X & ESP32) - KEPT YOUR ORIGINAL PORTS
         Node(package='gastrobot_imu', executable='bno08x_uart_node', name='imu_node',

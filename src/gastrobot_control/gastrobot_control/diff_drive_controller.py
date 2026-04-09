@@ -1,244 +1,110 @@
 #!/usr/bin/env python3
-"""
-diff_drive_controller.py  (ROS 2 Jazzy)
-
-Converts /cmd_vel → /wheel_cmd_rpm
-
-Output format:
-[ left_rpm, right_rpm ]
-"""
-
 import math
-import time
 import rclpy
-
 from rclpy.node import Node
-from geometry_msgs.msg import Twist
-from std_msgs.msg import Float32MultiArray
-
-
-def clamp(x, lo, hi):
-    return max(lo, min(hi, x))
-
-
-def rate_limit(target, prev, max_delta):
-    if target > prev + max_delta:
-        return prev + max_delta
-    if target < prev - max_delta:
-        return prev - max_delta
-    return target
-
+from geometry_msgs.msg import Twist, TransformStamped
+from std_msgs.msg import Int32MultiArray, Float32MultiArray
+from sensor_msgs.msg import Imu
+from nav_msgs.msg import Odometry
+from tf2_ros import TransformBroadcaster
 
 class DiffDriveController(Node):
-
     def __init__(self):
-
         super().__init__("diff_drive_controller")
 
-        # =============================
-        # Robot Parameters (UPDATED)
-        # =============================
+        # 1. Physical Specs (Updated to your hardware)
+        self.radius = 0.072        # 144mm diameter
+        self.base = 0.57           # 620mm outer - 50mm wheel width
+        self.tpr = 1425.1          # goBILDA Yellow Jacket 50.9:1 spec
+        self.m_per_tick = (2 * math.pi * self.radius) / self.tpr
 
-        self.declare_parameter("wheel_radius_m", 0.072)   # 144mm diameter
-        self.declare_parameter("wheel_base_m", 0.56)      # center-to-center
+        # 2. Odometry State
+        self.x, self.y, self.th = 0.0, 0.0, 0.0
+        self.last_left, self.last_right = None, None
+        self.imu_yaw, self.has_imu = 0.0, False
+        self.last_time = self.get_clock().now()
 
-        self.declare_parameter("max_wheel_rpm", 160.0)
+        # 3. ROS I/O
+        self.tf_broadcaster = TransformBroadcaster(self)
+        self.odom_pub = self.create_publisher(Odometry, "/odom", 10)
+        self.rpm_pub = self.create_publisher(Float32MultiArray, "/wheel_cmd_rpm", 10)
 
-        # Safety
-        self.declare_parameter("cmd_timeout_s", 0.4)
+        # Subscriptions
+        self.create_subscription(Twist, "/cmd_vel", self.cmd_cb, 10)
+        self.create_subscription(Int32MultiArray, "/wheel_ticks", self.ticks_cb, 10)
+        self.create_subscription(Imu, "/imu/data", self.imu_cb, 10)
 
-        # Loop rate
-        self.declare_parameter("rate_hz", 30.0)
+        self.get_logger().info("Gastrobot: Direct Odometry + IMU Active")
 
-        # Smoothing
-        self.declare_parameter("enable_ramp", True)
-        self.declare_parameter("max_rpm_slew_per_s", 400.0)
+    def imu_cb(self, msg):
+        q = msg.orientation
+        # Convert Quaternion to Yaw
+        self.imu_yaw = math.atan2(2*(q.w*q.z + q.x*q.y), 1 - 2*(q.y*q.y + q.z*q.z))
+        self.has_imu = True
 
-        # Scaling (for tuning later)
-        self.declare_parameter("linear_scale", 1.0)
-        self.declare_parameter("angular_scale", 1.0)
-
-        # =============================
-        # Load Parameters
-        # =============================
-
-        self.wheel_radius_m = float(self.get_parameter("wheel_radius_m").value)
-        self.wheel_base_m = float(self.get_parameter("wheel_base_m").value)
-
-        self.max_wheel_rpm = float(self.get_parameter("max_wheel_rpm").value)
-
-        self.cmd_timeout_s = float(self.get_parameter("cmd_timeout_s").value)
-
-        self.rate_hz = float(self.get_parameter("rate_hz").value)
-
-        self.enable_ramp = bool(self.get_parameter("enable_ramp").value)
-        self.max_rpm_slew_per_s = float(self.get_parameter("max_rpm_slew_per_s").value)
-
-        self.linear_scale = float(self.get_parameter("linear_scale").value)
-        self.angular_scale = float(self.get_parameter("angular_scale").value)
-
-        # =============================
-        # ROS I/O
-        # =============================
-
-        self.sub = self.create_subscription(
-            Twist,
-            "/cmd_vel",
-            self.cmd_cb,
-            10
-        )
-
-        self.pub = self.create_publisher(
-            Float32MultiArray,
-            "/wheel_cmd_rpm",
-            10
-        )
-
-        # =============================
-        # State
-        # =============================
-
-        self.last_cmd_time = 0.0
-
-        self.target_left_rpm = 0.0
-        self.target_right_rpm = 0.0
-
-        self.out_left_rpm = 0.0
-        self.out_right_rpm = 0.0
-
-        self.last_loop_time = time.monotonic()
-        self.last_debug_time = time.monotonic()
-
-        # =============================
-        # Timer
-        # =============================
-
-        self.timer = self.create_timer(
-            1.0 / max(self.rate_hz, 1.0),
-            self.loop
-        )
-
-        self.get_logger().info(
-            f"DiffDrive started "
-            f"(radius={self.wheel_radius_m:.3f} m, base={self.wheel_base_m:.3f} m)"
-        )
-
-    # ===================================
-    # Receive cmd_vel
-    # ===================================
-
-    def cmd_cb(self, msg):
-
-        now = time.monotonic()
-        self.last_cmd_time = now
-
-        v = float(msg.linear.x) * self.linear_scale
-        w = float(msg.angular.z) * self.angular_scale
-
-        # Differential kinematics
-        v_left = v - (w * self.wheel_base_m / 2.0)
-        v_right = v + (w * self.wheel_base_m / 2.0)
-
-        denom = (2.0 * math.pi * self.wheel_radius_m)
-
-        if denom <= 0.0:
-            self.target_left_rpm = 0.0
-            self.target_right_rpm = 0.0
+    def ticks_cb(self, msg):
+        if len(msg.data) < 2: return
+        now = self.get_clock().now()
+        dt = (now - self.last_time).nanoseconds / 1e9
+        
+        if self.last_left is None:
+            self.last_left, self.last_right, self.last_time = msg.data[0], msg.data[1], now
             return
 
-        left_rpm = (v_left / denom) * 60.0
-        right_rpm = (v_right / denom) * 60.0
+        # Distance Math
+        d_l = (msg.data[0] - self.last_left) * self.m_per_tick
+        d_r = (msg.data[1] - self.last_right) * self.m_per_tick
+        d_dist = (d_l + d_r) / 2.0
 
-        self.target_left_rpm = clamp(
-            left_rpm,
-            -self.max_wheel_rpm,
-            self.max_wheel_rpm
-        )
-
-        self.target_right_rpm = clamp(
-            right_rpm,
-            -self.max_wheel_rpm,
-            self.max_wheel_rpm
-        )
-
-    # ===================================
-    # Main Control Loop
-    # ===================================
-
-    def loop(self):
-
-        now = time.monotonic()
-        dt = max(now - self.last_loop_time, 1e-6)
-        self.last_loop_time = now
-
-        # -------------------------
-        # Watchdog
-        # -------------------------
-        if (now - self.last_cmd_time) > self.cmd_timeout_s:
-            self.target_left_rpm = 0.0
-            self.target_right_rpm = 0.0
-
-        # -------------------------
-        # Ramp Limiting
-        # -------------------------
-        if self.enable_ramp:
-
-            max_delta = self.max_rpm_slew_per_s * dt
-
-            self.out_left_rpm = rate_limit(
-                self.target_left_rpm,
-                self.out_left_rpm,
-                max_delta
-            )
-
-            self.out_right_rpm = rate_limit(
-                self.target_right_rpm,
-                self.out_right_rpm,
-                max_delta
-            )
-
+        # Heading: Use IMU as absolute truth, fall back to encoders if IMU dies
+        if self.has_imu:
+            self.th = self.imu_yaw
         else:
+            self.th += (d_r - d_l) / self.base
 
-            self.out_left_rpm = self.target_left_rpm
-            self.out_right_rpm = self.target_right_rpm
+        # Integrate Position
+        self.x += d_dist * math.cos(self.th)
+        self.y += d_dist * math.sin(self.th)
 
-        # -------------------------
-        # Publish
-        # -------------------------
-        msg = Float32MultiArray()
-        msg.data = [
-            float(self.out_left_rpm),
-            float(self.out_right_rpm)
-        ]
+        # Broadcast the "Moving Robot" transform
+        self.publish_odom_and_tf(now, d_dist/dt if dt > 0 else 0.0)
+        self.last_left, self.last_right, self.last_time = msg.data[0], msg.data[1], now
 
-        self.pub.publish(msg)
+    def publish_odom_and_tf(self, now, linear_vel):
+        # Publish TF: odom -> base_footprint (This moves the box in Rviz)
+        t = TransformStamped()
+        t.header.stamp, t.header.frame_id, t.child_frame_id = now.to_msg(), "odom", "base_footprint"
+        t.transform.translation.x, t.transform.translation.y = self.x, self.y
+        t.transform.rotation.z, t.transform.rotation.w = math.sin(self.th/2), math.cos(self.th/2)
+        self.tf_broadcaster.sendTransform(t)
 
-        # -------------------------
-        # Debug (1 Hz)
-        # -------------------------
-        if now - self.last_debug_time > 1.0:
-            self.get_logger().info(
-                f"L:{self.out_left_rpm:.1f} RPM | R:{self.out_right_rpm:.1f} RPM"
-            )
-            self.last_debug_time = now
+        # Publish Odom topic for Navigation
+        o = Odometry()
+        o.header = t.header
+        o.child_frame_id = t.child_frame_id
+        o.pose.pose.position.x, o.pose.pose.position.y = self.x, self.y
+        o.pose.pose.orientation = t.transform.rotation
+        o.twist.twist.linear.x = float(linear_vel)
+        self.odom_pub.publish(o)
 
+    def cmd_cb(self, msg):
+        v, w = msg.linear.x, msg.angular.z
+        v_l = v - (w * self.base / 2.0)
+        v_r = v + (w * self.base / 2.0)
+        
+        # Convert to RPM for ESP32
+        circ = 2 * math.pi * self.radius
+        l_rpm = (v_l / circ) * 60.0
+        r_rpm = (v_r / circ) * 60.0
+        
+        out = Float32MultiArray()
+        out.data = [float(l_rpm), float(r_rpm)]
+        self.rpm_pub.publish(out)
 
 def main():
-
     rclpy.init()
-
-    node = DiffDriveController()
-
-    try:
-        rclpy.spin(node)
-
-    except KeyboardInterrupt:
-        pass
-
-    finally:
-        node.destroy_node()
-        rclpy.shutdown()
-
+    rclpy.spin(DiffDriveController())
+    rclpy.shutdown()
 
 if __name__ == "__main__":
     main()

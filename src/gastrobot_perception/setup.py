@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'ultrasonic_node = gastrobot_perception.ultrasonic_node:main',
         ],
     },
 )

@@ -3,9 +3,13 @@
 <package format="3">
   <name>gastrobot_perception</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Sensor processing and perception for the Gastrobot, including ultrasonic arrays.</description>
   <maintainer email="youness@todo.todo">youness</maintainer>
   <license>TODO: License declaration</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
