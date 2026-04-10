@@ -17,7 +17,7 @@
   <joint name="base_joint" type="fixed">
     <parent link="base_footprint"/>
     <child link="base_link"/>
-    <origin xyz="0 0 0.096" rpy="0 0 0"/>
+    <origin xyz="0 0 0.096" rpy="0 0 0"/> 
   </joint>
 
   <link name="left_wheel">
@@ -57,7 +57,7 @@
   <joint name="tower_joint" type="fixed">
     <parent link="base_link"/>
     <child link="tower_link"/>
-    <origin xyz="-0.15 0 0.31" rpy="0 0 0"/>
+    <origin xyz="-0.15 0 0.31" rpy="0 0 0"/> 
   </joint>
 
   <link name="laser">
@@ -78,48 +78,6 @@
     <parent link="base_link"/>
     <child link="imu_link"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
-  </joint>
-
-  <link name="ultrasonic_front_left_link"/>
-  <joint name="ultrasonic_front_left_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="ultrasonic_front_left_link"/>
-    <origin xyz="0.37 0.14 0.10" rpy="0 0 0.174"/>
-  </joint>
-
-  <link name="ultrasonic_front_right_link"/>
-  <joint name="ultrasonic_front_right_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="ultrasonic_front_right_link"/>
-    <origin xyz="0.37 -0.13 0.10" rpy="0 0 -0.174"/>
-  </joint>
-
-  <link name="ultrasonic_back_left_link"/>
-  <joint name="ultrasonic_back_left_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="ultrasonic_back_left_link"/>
-    <origin xyz="-0.14 0.14 0.10" rpy="0 0 2.880"/>
-  </joint>
-
-  <link name="ultrasonic_back_right_link"/>
-  <joint name="ultrasonic_back_right_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="ultrasonic_back_right_link"/>
-    <origin xyz="-0.14 -0.13 0.10" rpy="0 0 -2.793"/>
-  </joint>
-
-  <link name="ultrasonic_left_side_link"/>
-  <joint name="ultrasonic_left_side_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="ultrasonic_left_side_link"/>
-    <origin xyz="0.15 0.24 0.10" rpy="0 0 1.222"/>
-  </joint>
-
-  <link name="ultrasonic_right_side_link"/>
-  <joint name="ultrasonic_right_side_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="ultrasonic_right_side_link"/>
-    <origin xyz="0.16 -0.24 0.10" rpy="0 0 -1.309"/>
   </joint>
 
 </robot>

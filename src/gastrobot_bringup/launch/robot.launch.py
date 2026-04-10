@@ -38,6 +38,7 @@ def generate_launch_description():
         # 3. Motor Controller - (Listening to SMOOTHED /cmd_vel)
         Node(package='gastrobot_control', executable='diff_drive_controller', name='diff_drive_controller'),
 
+
         # 4. Joystick & Teleop - (Publishing to /cmd_vel_joy)
         Node(package='joy', executable='joy_node', name='joy_node', parameters=[joystick_config]),
         Node(package='teleop_twist_joy', executable='teleop_node', name='teleop_node',

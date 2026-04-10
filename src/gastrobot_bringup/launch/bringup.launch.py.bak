@@ -128,6 +128,15 @@ def generate_launch_description():
             output='screen'
         ),
 
+        # ================================
+        # STATIC TF (BASE -> LIDAR)
+        # ================================
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='base_to_laser_tf',
+            arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'laser']
+        ),
 
         # ================================
         # LIDAR
