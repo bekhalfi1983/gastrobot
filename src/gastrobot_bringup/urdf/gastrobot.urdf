@@ -17,12 +17,39 @@
   <joint name="base_joint" type="fixed">
     <parent link="base_footprint"/>
     <child link="base_link"/>
-    <origin xyz="0 0 0.08" rpy="0 0 0"/> </joint>
+    <origin xyz="0 0 0.096" rpy="0 0 0"/> 
+  </joint>
+
+  <link name="left_wheel">
+    <visual>
+      <origin rpy="1.5708 0 0" xyz="0 0 0"/>
+      <geometry><cylinder radius="0.072" length="0.04"/></geometry>
+      <material name="black"/>
+    </visual>
+  </link>
+  <joint name="left_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <origin xyz="0 0.24 -0.024" rpy="0 0 0"/>
+  </joint>
+
+  <link name="right_wheel">
+    <visual>
+      <origin rpy="1.5708 0 0" xyz="0 0 0"/>
+      <geometry><cylinder radius="0.072" length="0.04"/></geometry>
+      <material name="black"/>
+    </visual>
+  </link>
+  <joint name="right_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <origin xyz="0 -0.24 -0.024" rpy="0 0 0"/>
+  </joint>
 
   <link name="tower_link">
     <visual>
       <origin xyz="0 0 0.33" rpy="0 0 0"/>
-      <geometry><box size="0.21 0.21 0.66"/></geometry>
+      <geometry><box size="0.2 0.2 0.66"/></geometry>
       <material name="blue"/>
     </visual>
   </link>
@@ -30,7 +57,8 @@
   <joint name="tower_joint" type="fixed">
     <parent link="base_link"/>
     <child link="tower_link"/>
-    <origin xyz="-0.145 0 0.31" rpy="0 0 0"/> </joint>
+    <origin xyz="-0.15 0 0.31" rpy="0 0 0"/> 
+  </joint>
 
   <link name="laser">
     <visual>
@@ -42,7 +70,7 @@
   <joint name="laser_joint" type="fixed">
     <parent link="tower_link"/>
     <child link="laser"/>
-    <origin xyz="0 0 0.66" rpy="0 0 0"/> 
+    <origin xyz="0 0 0.66" rpy="0 0 3.14159"/>
   </joint>
 
   <link name="imu_link"/>

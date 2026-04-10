@@ -3,7 +3,7 @@
 import sys
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from std_msgs.msg import String, Float32  # Added Float32
 
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QPushButton, QLabel,
@@ -20,8 +20,20 @@ class GuiNode(Node):
         self.lift_pub = self.create_publisher(String, '/lift_cmd', 10)
         self.nav_pub = self.create_publisher(String, '/table_cmd', 10)
 
+        # NEW: Subscriber for the Battery data coming from the Arduino Bridge
+        self.battery_sub = self.create_subscription(
+            Float32,
+            '/battery_percentage',
+            self.battery_callback,
+            10
+        )
+
         self.status_text = "IDLE"
-        self.battery_percent = 100
+        self.battery_percent = 0.0  # Default to 0 until data arrives
+
+    def battery_callback(self, msg):
+        """Updates the internal variable whenever new battery data arrives."""
+        self.battery_percent = msg.data
 
 
 # ================= MAIN WINDOW =================
@@ -50,7 +62,7 @@ class MainWindow(QWidget):
         self.status_label = QLabel("STATUS: IDLE")
         self.status_label.setStyleSheet("font-size: 20px; font-weight: bold;")
 
-        self.battery_label = QLabel("BATTERY: 100%")
+        self.battery_label = QLabel("BATTERY: --%")
         self.battery_label.setStyleSheet("font-size: 20px; font-weight: bold;")
 
         top_bar.addWidget(self.status_label)
@@ -59,34 +71,23 @@ class MainWindow(QWidget):
 
         main_layout.addLayout(top_bar)
 
-        # ================= FLEX SPACE ABOVE TITLE =================
+        # ================= TITLES & BUTTONS (UNCHANGED) =================
         main_layout.addStretch()
-
-        # ================= TITLE (CENTERED) =================
         self.title = QLabel("GASTROBOT CONTROL")
         self.title.setAlignment(Qt.AlignCenter)
         self.title.setStyleSheet("font-size: 40px; font-weight: bold; padding: 10px;")
-
         main_layout.addWidget(self.title)
-
-        # ================= FLEX SPACE BETWEEN TITLE & BUTTONS =================
         main_layout.addStretch()
 
-        # ================= BUTTON SECTION =================
         content_layout = QVBoxLayout()
 
-        # ===== TABLE =====
+        # Table Section
         table_row = QHBoxLayout()
-
         self.table_dropdown = QComboBox()
         for i in range(1, 11):
             self.table_dropdown.addItem(f"Table {i}")
-
-        self.table_dropdown.setStyleSheet("""
-            font-size: 32px;
-            padding: 20px;
-        """)
-
+        self.table_dropdown.setStyleSheet("font-size: 32px; padding: 20px;")
+        
         self.go_button = QPushButton("GO")
         self.go_button.setStyleSheet("""
             QPushButton {
@@ -97,68 +98,45 @@ class MainWindow(QWidget):
                 border-radius: 15px;
             }
         """)
-
         self.go_button.clicked.connect(self.send_table)
-
         table_row.addWidget(self.table_dropdown)
         table_row.addWidget(self.go_button)
-
         content_layout.addLayout(table_row)
 
-        # ===== LIFT =====
+        # Lift Section
         lift_row = QHBoxLayout()
-
         self.lift_up = QPushButton("SERVE")
         self.lift_stop = QPushButton("STOP")
         self.lift_home = QPushButton("HOME")
-
         btn_style = "font-size: 28px; padding: 25px; border-radius: 10px;"
-
         self.lift_up.setStyleSheet("background-color: #39FF14; " + btn_style)
         self.lift_stop.setStyleSheet("background-color: orange; " + btn_style)
         self.lift_home.setStyleSheet("background-color: #666; " + btn_style)
-
+        
         self.lift_up.clicked.connect(lambda: self.send_lift("UP"))
         self.lift_stop.clicked.connect(lambda: self.send_lift("STOP"))
         self.lift_home.clicked.connect(lambda: self.send_lift("HOME"))
-
+        
         lift_row.addWidget(self.lift_up)
         lift_row.addWidget(self.lift_stop)
         lift_row.addWidget(self.lift_home)
-
         content_layout.addLayout(lift_row)
 
-        # ===== E-STOP =====
+        # E-Stop & Power
         self.estop = QPushButton("EMERGENCY STOP")
-        self.estop.setStyleSheet("""
-            QPushButton {
-                background-color: red;
-                color: white;
-                font-size: 40px;
-                padding: 30px;
-                border-radius: 15px;
-            }
-        """)
-
+        self.estop.setStyleSheet("background-color: red; color: white; font-size: 40px; padding: 30px; border-radius: 15px;")
         content_layout.addWidget(self.estop)
 
-        # ===== POWER =====
         power_row = QHBoxLayout()
-
         self.shutdown_btn = QPushButton("SHUTDOWN")
         self.restart_btn = QPushButton("RESTART")
-
         self.shutdown_btn.setStyleSheet("background-color: red; font-size: 20px; padding: 15px;")
         self.restart_btn.setStyleSheet("background-color: orange; font-size: 20px; padding: 15px;")
-
         power_row.addWidget(self.shutdown_btn)
         power_row.addWidget(self.restart_btn)
-
         content_layout.addLayout(power_row)
 
-        # ================= ADD BUTTONS TO MAIN =================
         main_layout.addLayout(content_layout)
-
         self.setLayout(main_layout)
 
         # ================= TIMER =================
@@ -167,7 +145,6 @@ class MainWindow(QWidget):
         self.timer.start(100)
 
     # ================= FUNCTIONS =================
-
     def keyPressEvent(self, event):
         if event.key() == Qt.Key_Escape:
             self.close()
@@ -183,9 +160,11 @@ class MainWindow(QWidget):
         self.node.lift_pub.publish(msg)
 
     def update_ui(self):
+        # UI Refresh: Displays the latest battery data from the node
         self.status_label.setText(f"STATUS: {self.node.status_text}")
-        self.battery_label.setText(f"BATTERY: {self.node.battery_percent}%")
+        self.battery_label.setText(f"BATTERY: {self.node.battery_percent:.1f}%")
 
+        # Allow ROS to process incoming messages (like battery updates)
         rclpy.spin_once(self.node, timeout_sec=0)
 
 
@@ -193,13 +172,10 @@ class MainWindow(QWidget):
 def main():
     rclpy.init()
     node = GuiNode()
-
     app = QApplication(sys.argv)
     window = MainWindow(node)
     window.show()
-
     sys.exit(app.exec_())
-
 
 if __name__ == '__main__':
     main()

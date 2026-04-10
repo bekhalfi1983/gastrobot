@@ -1,11 +1,12 @@
 amcl:
   ros__parameters:
+    transform_tolerance: 1.5
     use_sim_time: false
-    alpha1: 0.2
-    alpha2: 0.2
-    alpha3: 0.2
-    alpha4: 0.2
-    alpha5: 0.2
+    alpha1: 0.1
+    alpha2: 0.1
+    alpha3: 0.1
+    alpha4: 0.1
+    alpha5: 0.1
     base_frame_id: "base_link"
     global_frame_id: "map"
     laser_model_type: "likelihood_field"
@@ -18,7 +19,7 @@ amcl:
     robot_model_type: "nav2_amcl::DifferentialMotionModel"
     update_min_a: 0.2
     update_min_d: 0.25
-    scan_topic: scan
+    scan_topic: /scan
 
 bt_navigator:
   ros__parameters:
@@ -119,7 +120,7 @@ local_costmap:
       height: 3
       resolution: 0.05
       robot_radius: 0.25
-      plugins: ["obstacle_layer", "range_layer", "inflation_layer"]
+      plugins: ["obstacle_layer",  "inflation_layer"]
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
@@ -129,15 +130,19 @@ local_costmap:
           clearing: True
           marking: True
           data_type: "LaserScan"
+          # Jazzy specific QoS
+          reliability: 1 
+          durability: 2
       range_layer:
         plugin: "nav2_costmap_2d::RangeSensorLayer"
         enabled: true
-        # FIX for Fatal topic error: use individual sources
-        observation_sources: front_sensors rear_sensors
+        # FIX: Topics must be a properly formatted YAML list
+        observation_sources: ["front_sensors", "back_sensors"]
         front_sensors:
           topics: ["/ultrasonic/front_left", "/ultrasonic/front_right"]
-        rear_sensors:
-          topics: ["/ultrasonic/rear_left", "/ultrasonic/rear_right"]
+        back_sensors:
+          # FIX: Topic names now match actual output
+          topics: ["/ultrasonic/back_left", "/ultrasonic/back_right"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
@@ -215,6 +220,19 @@ smoother_server:
       w_data: 0.2
       w_smooth: 0.3
 
+# FIX: Added missing configuration block for the lifecycle-managed node
+velocity_smoother:
+  ros__parameters:
+    use_sim_time: false
+    smoothing_frequency: 20.0
+    scale_velocities: false
+    feedback: "OPEN_LOOP"
+    max_velocity: [0.3, 0.0, 1.0]
+    min_velocity: [-0.3, 0.0, -1.0]
+    max_acceleration: [1.0, 0.0, 2.0]
+    max_deceleration: [-1.0, 0.0, -2.0]
+    odom_topic: "odom"
+
 collision_monitor:
   ros__parameters:
     use_sim_time: false
@@ -231,7 +249,7 @@ collision_monitor:
     stop_polygon:
       type: "polygon"
       action_type: "stop"
-      # FIXED: Quotes for depth-2 parsing
+      # Points must be formatted as a string for depth-2 parsing
       points: "[[0.3, 0.3], [0.3, -0.3], [-0.3, -0.3], [-0.3, 0.3]]"
 
 waypoint_follower:
@@ -245,7 +263,6 @@ waypoint_follower:
       enabled: True
       waypoint_pause_duration: 200
 
-# NEW: Fixing the Docking Server error
 docking_server:
   ros__parameters:
     use_sim_time: false
@@ -265,5 +282,4 @@ lifecycle_manager_navigation:
   ros__parameters:
     use_sim_time: false
     autostart: true
-    # Complete list to ensure the bringup script is happy
     node_names: ["controller_server", "smoother_server", "planner_server", "behavior_server", "bt_navigator", "waypoint_follower", "velocity_smoother", "collision_monitor", "docking_server"]
