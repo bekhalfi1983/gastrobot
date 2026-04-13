@@ -15,7 +15,7 @@ class WheelOdometryNode(Node):
 
         # ================= PARAMETERS =================
         self.declare_parameter('wheel_radius', 0.072)     # meters
-        self.declare_parameter('wheel_base', 0.40)        # meters
+        self.declare_parameter('wheel_base', 0.56)        # meters
         self.declare_parameter('ticks_per_rev', 712.0)    # ESP32 currently uses CPR 712
         self.declare_parameter('odom_frame', 'odom')
         self.declare_parameter('base_frame', 'base_link')
@@ -101,8 +101,8 @@ class WheelOdometryNode(Node):
 
         # Convert ticks to wheel travel
         meters_per_tick = (2.0 * math.pi * self.wheel_radius) / self.ticks_per_rev
-        d_left = float(delta_left_ticks) * meters_per_tick
-        d_right = float(delta_right_ticks) * meters_per_tick
+        d_left = -float(delta_left_ticks) * meters_per_tick
+        d_right = -float(delta_right_ticks) * meters_per_tick
 
         d_center = (d_left + d_right) / 2.0
         d_theta = (d_right - d_left) / self.wheel_base

@@ -28,12 +28,19 @@ def generate_launch_description():
  #            parameters=[ekf_params_file, {'use_sim_time': use_sim_time}]),
 
         # 2. Hardware (BNO08X & ESP32) - KEPT YOUR ORIGINAL PORTS
-        Node(package='gastrobot_imu', executable='bno08x_uart_node', name='imu_node',
+        Node(package='gastrobot_imu', executable='bno08x_uart_node', name='imu_node',output='screen',
              parameters=[{'port': '/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0',
                           'baudrate': 115200, 'frame_id': 'imu_link'}]),
         Node(package='gastrobot_control', executable='esp32_bridge_node', name='esp32_bridge_node',
              parameters=[{'port': '/dev/serial/by-id/usb-Silicon_Labs_CP2102N_USB_to_UART_Bridge_Controller_a67f795ee971f0119cc3f99e1045c30f-if00-port0',
                           'baudrate': 115200}]),
+        Node(
+            package='gastrobot_control',
+            executable='wheel_odometry_node',
+            name='wheel_odometry_node',
+            output='screen'
+        ),
+
 
         # 3. Motor Controller - (Listening to SMOOTHED /cmd_vel)
         Node(package='gastrobot_control', executable='diff_drive_controller', name='diff_drive_controller'),
@@ -62,10 +69,29 @@ def generate_launch_description():
                 'use_sim_time': use_sim_time
             }],
             remappings=[
-                ('cmd_vel', '/cmd_vel_joy'),      # Input from Teleop
+                ('cmd_vel', '/cmd_vel_pre_smooth'),      # Input from heading hold node
                 ('cmd_vel_smoothed', '/cmd_vel')  # Output to Motors
             ]
         ),
+        #---twist_mux cmd_vel remapping:
+        Node(
+            package='twist_mux',
+            executable='twist_mux',
+            name='twist_mux',
+            output='screen',
+            parameters=[os.path.join(
+                get_package_share_directory('gastrobot_bringup'),
+                'config',
+                'twist_mux.yaml'
+            )],
+        ),
+        Node(
+            package='gastrobot_control',
+            executable='heading_hold_node',
+            name='heading_hold_node',
+            output='screen'
+        ),
+
 
         # 6. UI & Extra Nodes
         Node(package='gastrobot_control', executable='lift_node', name='lift_node'),

@@ -12,6 +12,7 @@ setup(
         'console_scripts': [
             'bno08x_node = gastrobot_imu.bno08x_node:main',
             'bno08x_uart_node = gastrobot_imu.bno08x_uart_node:main',
+            'yaw_correction_node = gastrobot_imu.yaw_correction_node:main',
         ],
     },
 )

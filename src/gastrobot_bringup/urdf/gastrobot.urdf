@@ -57,7 +57,7 @@
   <joint name="tower_joint" type="fixed">
     <parent link="base_link"/>
     <child link="tower_link"/>
-    <origin xyz="-0.15 0 0.31" rpy="0 0 0"/>
+    <origin xyz="-0.0 0 0.31" rpy="0 0 0"/>
   </joint>
 
   <link name="laser">

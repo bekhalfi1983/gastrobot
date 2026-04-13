@@ -37,6 +37,7 @@ setup(
        'pid_test_node = gastrobot_control.pid_test_node:main',
        'bno08x_uart_node = gastrobot_control.bno08x_uart_node:main',
        'ui_node = gastrobot_control.ui_node:main',
+       'heading_hold_node = gastrobot_control.heading_hold_node:main',
        ],
     },
 
